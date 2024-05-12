@@ -1,8 +1,8 @@
-import './global.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import Header from './layouts/Header';
-const inter = Inter({ subsets: ['latin'] });
+import cx from 'classnames';
+import { notoSans, notoSansKR } from './styles/fonts.ts';
+import './styles/global.css';
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={cx(notoSans.className, notoSansKR.className)}>
                 <Header />
                 {children}
             </body>
