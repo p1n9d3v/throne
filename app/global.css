@@ -1,3 +1,5 @@
+@import 'normalize.css';
+
 :root {
     --purple-900: #4a1d96;
     --purple-800: #552185;
@@ -20,4 +22,11 @@
     --gray-100: #f3f4f6;
 
     --primary-color: #9751b6;
+}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
 }
