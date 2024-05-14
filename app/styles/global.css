@@ -22,6 +22,7 @@
     --gray-100: #f3f4f6;
 
     --primary-color: #9751b6;
+    --dark-color: var(--gray-800);
 }
 * {
     box-sizing: border-box;

@@ -21,28 +21,47 @@ type Story = StoryObj<typeof meta>;
 
 export const LargeSize: Story = {
     args: {
-        variant: 'primary',
+        variant: 'contained',
         size: 'large',
+        color: 'primary',
     },
 };
 
 export const MediumSize: Story = {
     args: {
-        variant: 'primary',
+        variant: 'contained',
         size: 'medium',
+        color: 'primary',
     },
 };
 
 export const SmallSize: Story = {
     args: {
-        variant: 'primary',
+        variant: 'contained',
         size: 'small',
+        color: 'primary',
     },
 };
 
-export const Primary: Story = {
+export const Contained: Story = {
     args: {
-        variant: 'primary',
+        variant: 'contained',
         size: 'large',
+        color: 'primary',
+    },
+};
+
+export const Outlined: Story = {
+    args: {
+        variant: 'outlined',
+        size: 'large',
+        color: 'primary',
+    },
+};
+export const Text: Story = {
+    args: {
+        variant: 'text',
+        size: 'large',
+        color: 'primary',
     },
 };
