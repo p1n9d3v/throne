@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn, userEvent, expect, within } from '@storybook/test';
+import { fn, userEvent, expect, within, waitFor } from '@storybook/test';
 import Modal from '.';
 import React from 'react';
 
@@ -55,7 +55,12 @@ export const PlayCloseModal: Story = {
 
         await userEvent.click(closeButton);
 
-        const modal = canvas.queryByRole('dialog');
-        await expect(modal).toBeNull();
+        await waitFor(
+            async () => {
+                const modal = canvas.queryByRole('dialog');
+                await expect(modal).toBeNull();
+            },
+            { timeout: 300 },
+        );
     },
 };
