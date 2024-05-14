@@ -26,10 +26,23 @@ export const LargeSize: Story = {
     },
 };
 
+export const MediumSize: Story = {
+    args: {
+        variant: 'primary',
+        size: 'medium',
+    },
+};
+
+export const SmallSize: Story = {
+    args: {
+        variant: 'primary',
+        size: 'small',
+    },
+};
+
 export const Primary: Story = {
-    // args: {
-    //     user: {
-    //         name: 'Jane Doe',
-    //     },
-    // },
+    args: {
+        variant: 'primary',
+        size: 'large',
+    },
 };
