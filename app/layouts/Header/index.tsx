@@ -7,11 +7,7 @@ function Header() {
     return (
         <header className={styles.Header}>
             <div className={styles.Header_title}>Trone</div>
-            <div>
-                <Button size="large" variant="primary">
-                    Login
-                </Button>
-            </div>
+            <div>Login</div>
         </header>
     );
 }
