@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 import { IoClose } from 'react-icons/io5';
+import cx from 'classnames';
 
 interface Props {
     isOpen: boolean;
@@ -9,7 +10,16 @@ interface Props {
 }
 
 function Modal({ isOpen, onClose, style }: Props) {
+    const [isAnimateEnd, setIsAnimateEnd] = React.useState(false);
     const ref = React.useRef<HTMLDivElement>(null);
+
+    const handleAnimationEnd = React.useCallback(() => {
+        setIsAnimateEnd(true);
+        setTimeout(() => {
+            onClose();
+            setIsAnimateEnd(false);
+        }, 200);
+    }, [onClose]);
 
     React.useEffect(() => {
         const onClickOutside = (e: Event) => {
@@ -18,7 +28,7 @@ function Modal({ isOpen, onClose, style }: Props) {
                 ref.current &&
                 !ref.current.contains(e.target as HTMLElement)
             )
-                onClose();
+                handleAnimationEnd();
         };
 
         document.addEventListener('mousedown', onClickOutside);
@@ -26,15 +36,21 @@ function Modal({ isOpen, onClose, style }: Props) {
         return () => {
             document.removeEventListener('mousedown', onClickOutside);
         };
-    }, [isOpen, onClose]);
+    }, [isOpen, handleAnimationEnd]);
 
     if (!isOpen) return null;
 
     return (
-        <div role="dialog" className={styles.Modal}>
+        <div
+            role="dialog"
+            className={cx(styles.Modal, {
+                [styles.Modal___fadeIn]: isOpen,
+                [styles.Modal___fadeOut]: isAnimateEnd,
+            })}
+        >
             <div ref={ref} className={styles.Modal__content} style={style}>
                 <button
-                    onClick={onClose}
+                    onClick={handleAnimationEnd}
                     className={styles.Modal__close}
                     aria-label="close modal"
                 >
