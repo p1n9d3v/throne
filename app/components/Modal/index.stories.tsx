@@ -26,7 +26,9 @@ export const Default: Story = {
         return (
             <>
                 <button onClick={handleToggleOpen}>Open Modal</button>
-                <Modal isOpen={open} onClose={handleToggleOpen} />
+                <Modal isOpen={open} onClose={handleToggleOpen}>
+                    Modal
+                </Modal>
             </>
         );
     },
@@ -42,7 +44,9 @@ export const PlayCloseModal: Story = {
         const handleCloseModal = () => setOpen(!open);
         return (
             <>
-                <Modal isOpen={open} onClose={handleCloseModal} />
+                <Modal isOpen={open} onClose={handleCloseModal}>
+                    Modal
+                </Modal>
             </>
         );
     },

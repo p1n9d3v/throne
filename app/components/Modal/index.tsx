@@ -3,13 +3,13 @@ import styles from './index.module.css';
 import { IoClose } from 'react-icons/io5';
 import cx from 'classnames';
 
-interface Props {
+interface Props extends React.PropsWithChildren {
     isOpen: boolean;
     onClose: () => void;
     style?: React.CSSProperties;
 }
 
-function Modal({ isOpen, onClose, style }: Props) {
+function Modal({ isOpen, onClose, style, children }: Props) {
     const [isAnimateEnd, setIsAnimateEnd] = React.useState(false);
     const ref = React.useRef<HTMLDivElement>(null);
 
@@ -56,7 +56,7 @@ function Modal({ isOpen, onClose, style }: Props) {
                 >
                     <IoClose size={24} />
                 </button>
-                123123
+                {children}
             </div>
         </div>
     );
