@@ -1,8 +1,9 @@
+'use client';
+
 import React from 'react';
-import Button from '@/components/ui/Button';
 import styles from './index.module.css';
-import { signupWithEmailAndPass } from '@/api/firebase';
 import Modal from '@/components/Modal';
+import Input from '@/components/ui/Input';
 
 interface Props {}
 
@@ -12,10 +13,9 @@ function Header() {
         <header className={styles.Header}>
             <div className={styles.Header_title}>Trone</div>
             <button onClick={() => setOpenModal(true)}>Login</button>
-            <Modal
-                isOpen={openModal}
-                onClose={() => setOpenModal(false)}
-            ></Modal>
+            <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
+                <Input />
+            </Modal>
         </header>
     );
 }
