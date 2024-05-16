@@ -10,7 +10,7 @@
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
         "test": "jest",
-        "emulator": "firebase emulators:start"
+        "emulator": "firebase emulators:start --import=./firebase_mock/ --export-on-exit"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.4.0",

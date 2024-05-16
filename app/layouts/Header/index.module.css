@@ -15,7 +15,7 @@
     text-transform: uppercase;
 }
 
-.SignIn {
+.SignUp {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;

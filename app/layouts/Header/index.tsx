@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import Button from '@/components/ui/Button';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { signupWithEmailAndPass } from '@/api/firebase';
 
 interface Props {}
 
@@ -35,9 +36,9 @@ function Header() {
         });
 
     const onSignUpSubmit = (data: FormValues) => {
-        console.log(data);
+        const { email, password } = data;
+        signupWithEmailAndPass(email, password);
     };
-    console.log(formState.errors);
 
     return (
         <header className={styles.Header}>
@@ -53,18 +54,21 @@ function Header() {
                         {...register('email')}
                         size="medium"
                         onClear={() => resetField('email')}
+                        error={formState.errors.email?.message}
                     />
                     <Input
                         type="password"
                         {...register('password')}
                         size="medium"
                         onClear={() => resetField('password')}
+                        error={formState.errors.password?.message}
                     />
                     <Input
                         type="password"
                         {...register('confirmPassword')}
                         size="medium"
                         onClear={() => resetField('password')}
+                        error={formState.errors.confirmPassword?.message}
                     />
                     <Button
                         size="large"
