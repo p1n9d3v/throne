@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Preview } from '@storybook/react';
 import '../app/styles/global.css';
 import '!style-loader!css-loader!../app/styles/reset.css';

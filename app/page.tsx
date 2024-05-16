@@ -7,7 +7,6 @@ export default function Home() {
             <Button variant="contained" color="primary" size="large">
                 123
             </Button>
-            <Input />
         </div>
     );
 }

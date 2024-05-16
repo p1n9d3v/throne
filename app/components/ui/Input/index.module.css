@@ -1,7 +1,11 @@
 .Input {
-    outline: 1px solid var(--gray-100);
+    position: relative;
+    outline: 1px solid var(--gray-300);
     border-radius: 0.8rem;
     transition: outline 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .Input:focus-within {
@@ -34,4 +38,13 @@
 
 .Input___large input {
     font-size: 1.8rem;
+}
+
+.Input___clearButton {
+    position: absolute;
+    right: 0.8rem;
+}
+
+.Input___withOnClear {
+    padding-right: 3.2rem;
 }

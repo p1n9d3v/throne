@@ -14,7 +14,7 @@ function Header() {
             <div className={styles.Header_title}>Trone</div>
             <button onClick={() => setOpenModal(true)}>Login</button>
             <Modal isOpen={openModal} onClose={() => setOpenModal(false)}>
-                <Input />
+                {/* <Input /> */}
             </Modal>
         </header>
     );
