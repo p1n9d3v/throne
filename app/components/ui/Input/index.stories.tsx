@@ -48,6 +48,13 @@ export const InputWithIcon: Story = {
     },
 };
 
+export const InputError: Story = {
+    args: {
+        size: 'large',
+        error: 'password is not correct',
+    },
+};
+
 export const InputWithClearButton: Story = {
     render: () => {
         const size = ['small', 'medium', 'large'];

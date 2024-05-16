@@ -11,10 +11,11 @@ interface Props extends BaseInput {
     size: 'small' | 'medium' | 'large';
     icon?: React.ReactNode;
     onClear?: () => void;
+    error?: string;
 }
 
 const Input = React.forwardRef<HTMLInputElement, Props & UseFormRegisterReturn>(
-    ({ size, icon, onClear, ...otherProps }, ref) => {
+    ({ size, icon, onClear, error, ...otherProps }, ref) => {
         const [hasValue, setHasValue] = React.useState(false);
 
         React.useEffect(() => {
@@ -39,30 +40,37 @@ const Input = React.forwardRef<HTMLInputElement, Props & UseFormRegisterReturn>(
             }
         };
         return (
-            <div
-                className={cx(styles.Input, {
-                    [styles.Input___small]: size === 'small',
-                    [styles.Input___medium]: size === 'medium',
-                    [styles.Input___large]: size === 'large',
-                    [styles.Input___withOnClear]: !!onClear,
-                })}
-            >
-                {icon && <>{icon}</>}
-                <input {...otherProps} ref={ref} onChange={handleInputChange} />
-                {hasValue && !!onClear && (
-                    <button
-                        type="button"
-                        onClick={handleClear}
-                        className={styles.Input___clearButton}
-                    >
-                        <IoClose
-                            size={24}
-                            style={{
-                                cursor: 'pointer',
-                            }}
-                        />
-                    </button>
-                )}
+            <div>
+                <div
+                    className={cx(styles.Input, {
+                        [styles.Input___small]: size === 'small',
+                        [styles.Input___medium]: size === 'medium',
+                        [styles.Input___large]: size === 'large',
+                        [styles.Input___withOnClear]: !!onClear,
+                    })}
+                >
+                    {icon && <>{icon}</>}
+                    <input
+                        {...otherProps}
+                        ref={ref}
+                        onChange={handleInputChange}
+                    />
+                    {hasValue && !!onClear && (
+                        <button
+                            type="button"
+                            onClick={handleClear}
+                            className={styles.Input___clearButton}
+                        >
+                            <IoClose
+                                size={24}
+                                style={{
+                                    cursor: 'pointer',
+                                }}
+                            />
+                        </button>
+                    )}
+                </div>
+                {error && <p className={styles.Input__error}>{error}</p>}
             </div>
         );
     },

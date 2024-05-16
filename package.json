@@ -13,6 +13,7 @@
         "emulator": "firebase emulators:start"
     },
     "dependencies": {
+        "@hookform/resolvers": "^3.4.0",
         "classnames": "^2.5.1",
         "firebase": "^10.11.1",
         "next": "14.2.3",
@@ -21,7 +22,8 @@
         "react-dom": "^18",
         "react-hook-form": "^7.51.4",
         "react-icons": "^5.2.1",
-        "ts-node": "^10.9.2"
+        "ts-node": "^10.9.2",
+        "yup": "^1.4.0"
     },
     "devDependencies": {
         "@chromatic-com/storybook": "^1.3.5",
