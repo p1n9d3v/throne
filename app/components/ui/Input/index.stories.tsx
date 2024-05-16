@@ -3,16 +3,16 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { fn, userEvent, within, expect } from '@storybook/test';
 import Input from '.';
 import { MdPerson } from 'react-icons/md';
+import { useForm, UseFormRegisterReturn } from 'react-hook-form';
 
-const meta = {
+const meta: Meta<typeof Input> = {
     title: 'Components/Input',
     component: Input,
     tags: ['autodocs'],
     parameters: {
         layout: 'centered',
     },
-    args: {},
-} satisfies Meta<typeof Input>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -49,11 +49,9 @@ export const InputWithIcon: Story = {
 };
 
 export const InputWithClearButton: Story = {
-    args: {
-        size: ['small', 'medium', 'large'] as any,
-    },
-    render: ({ size }: { size: any }) => {
-        const [text, setText] = React.useState('');
+    render: () => {
+        const size = ['small', 'medium', 'large'];
+        const { register, resetField } = useForm();
         return (
             <div
                 style={{
@@ -65,10 +63,9 @@ export const InputWithClearButton: Story = {
                     <Input
                         key={`input-${idx}`}
                         type="text"
+                        {...register(`input-${idx}`)}
                         size={s as any}
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
-                        onClear={() => setText('')}
+                        onClear={() => resetField(`input-${idx}`)}
                     />
                 ))}
             </div>
@@ -81,15 +78,13 @@ export const PlayClearInput: Story = {
         size: 'medium',
     },
     render: ({ size, onClear }) => {
-        const [text, setText] = React.useState('');
-
+        const { register, resetField } = useForm();
         return (
             <Input
                 type="text"
                 size={size}
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                onClear={() => setText('')}
+                {...register('input')}
+                onClear={() => resetField('input')}
             />
         );
     },
