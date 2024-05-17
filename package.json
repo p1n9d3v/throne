@@ -9,10 +9,11 @@
         "lint": "next lint",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "test": "jest",
-        "emulator": "firebase emulators:start --import=./firebase_mock/ --export-on-exit"
+        "emulator": "firebase emulators:start --import=./firebase_mock/ --export-on-exit",
+        "test": "firebase emulators:exec --only auth,firestore,storage 'jest'"
     },
     "dependencies": {
+        "@firebase/rules-unit-testing": "^3.0.3",
         "@hookform/resolvers": "^3.4.0",
         "classnames": "^2.5.1",
         "firebase": "^10.11.1",

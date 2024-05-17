@@ -1,10 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import {
-    Auth,
-    connectAuthEmulator,
-    createUserWithEmailAndPassword,
-    getAuth,
-} from 'firebase/auth';
+import { connectAuthEmulator, getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -17,20 +12,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 connectAuthEmulator(auth, 'http://localhost:9099');
-
-export const signupWithEmailAndPass = async (
-    email: string,
-    password: string,
-) => {
-    const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password,
-    );
-
-    console.log(userCredential);
-    const user = userCredential.user;
-    console.log(user);
-};

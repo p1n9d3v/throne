@@ -20,14 +20,16 @@ const schema = yup.object({
         .required()
         .oneOf([yup.ref('password'), ''], 'Passwords must match'),
 });
+
 function SignUp() {
     const { register, handleSubmit, resetField, formState } =
         useForm<FormValues>({
             resolver: yupResolver(schema),
         });
-    const onSignUpSubmit = (data: FormValues) => {
+    const onSignUpSubmit = async (data: FormValues) => {
         const { email, password } = data;
-        signupWithEmailAndPass(email, password);
+        const user = await signupWithEmailAndPass(email, password);
+        console.log(user);
     };
     return (
         <form onSubmit={handleSubmit(onSignUpSubmit)} className={styles.SignUp}>
