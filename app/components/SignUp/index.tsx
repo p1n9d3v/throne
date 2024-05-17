@@ -1,4 +1,4 @@
-import { signupWithEmailAndPass } from '@/api/firebase';
+import { signupWithEmailAndPass } from '@/api/auth';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -29,7 +29,6 @@ function SignUp() {
     const onSignUpSubmit = async (data: FormValues) => {
         const { email, password } = data;
         const user = await signupWithEmailAndPass(email, password);
-        console.log(user);
     };
     return (
         <form onSubmit={handleSubmit(onSignUpSubmit)} className={styles.SignUp}>
