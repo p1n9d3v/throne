@@ -14,9 +14,3 @@
     font-weight: 800;
     text-transform: uppercase;
 }
-
-.SignUp {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}

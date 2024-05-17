@@ -15,6 +15,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const ModalContent = () => (
+    <div
+        style={{
+            width: '400px',
+            height: '500px',
+            fontSize: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}
+    >
+        Modal
+    </div>
+);
 export const Default: Story = {
     args: {
         isOpen: false,
@@ -27,7 +41,7 @@ export const Default: Story = {
             <>
                 <button onClick={handleToggleOpen}>Open Modal</button>
                 <Modal isOpen={open} onClose={handleToggleOpen}>
-                    Modal
+                    <ModalContent />
                 </Modal>
             </>
         );
@@ -45,7 +59,7 @@ export const PlayCloseModal: Story = {
         return (
             <>
                 <Modal isOpen={open} onClose={handleCloseModal}>
-                    Modal
+                    <ModalContent />
                 </Modal>
             </>
         );

@@ -2,13 +2,22 @@ import React from 'react';
 import cx from 'classnames';
 import styles from './index.module.css';
 
-interface Props extends React.ComponentProps<'button'> {
-    size: 'small' | 'medium' | 'large';
+interface Props
+    extends React.ComponentProps<'button'>,
+        React.PropsWithChildren {
     color: 'primary';
     variant: 'contained' | 'outlined' | 'text';
+    size?: 'small' | 'medium' | 'large';
+    fullWidth?: boolean;
 }
 
-function Button({ size, color = 'primary', variant, ...otherProps }: Props) {
+function Button({
+    size,
+    color = 'primary',
+    variant,
+    children,
+    ...otherProps
+}: Props) {
     return (
         <button
             className={cx(
@@ -32,9 +41,10 @@ function Button({ size, color = 'primary', variant, ...otherProps }: Props) {
                         variant === 'text' && color === 'primary',
                 },
             )}
+            style={{ width: otherProps.fullWidth ? '100%' : 'fit-content' }}
             {...otherProps}
         >
-            Click Me
+            {children}
         </button>
     );
 }

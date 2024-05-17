@@ -17,11 +17,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const FullWidth: Story = {
+    args: {
+        variant: 'contained',
+        color: 'primary',
+        fullWidth: true,
+        children: 'Button',
+    },
+};
+
 export const LargeSize: Story = {
     args: {
         variant: 'contained',
         size: 'large',
         color: 'primary',
+        children: 'Button',
     },
 };
 
@@ -30,6 +40,7 @@ export const MediumSize: Story = {
         variant: 'contained',
         size: 'medium',
         color: 'primary',
+        children: 'Button',
     },
 };
 
@@ -38,6 +49,7 @@ export const SmallSize: Story = {
         variant: 'contained',
         size: 'small',
         color: 'primary',
+        children: 'Button',
     },
 };
 
@@ -46,6 +58,7 @@ export const Contained: Story = {
         variant: 'contained',
         size: 'large',
         color: 'primary',
+        children: 'Button',
     },
 };
 
@@ -54,12 +67,15 @@ export const Outlined: Story = {
         variant: 'outlined',
         size: 'large',
         color: 'primary',
+        children: 'Button',
     },
 };
+
 export const Text: Story = {
     args: {
         variant: 'text',
         size: 'large',
         color: 'primary',
+        children: 'Button',
     },
 };

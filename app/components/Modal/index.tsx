@@ -50,11 +50,12 @@ function Modal({ isOpen, onClose, style, children }: Props) {
         >
             <div ref={ref} className={styles.Modal__content} style={style}>
                 <button
+                    type="button"
                     onClick={handleAnimationEnd}
                     className={styles.Modal__close}
                     aria-label="close modal"
                 >
-                    <IoClose size={24} />
+                    <IoClose size={32} />
                 </button>
                 {children}
             </div>
