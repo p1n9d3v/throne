@@ -7,7 +7,6 @@ import Input from '../ui/Input';
 import Button from '../ui/Button';
 import useAuth from '@/hooks/useAuth';
 import useModal from '@/hooks/useModal';
-import { QueryErrorResetBoundary } from '@tanstack/react-query';
 
 interface FormValues {
     email: string;
@@ -38,10 +37,6 @@ function SignIn() {
     React.useEffect(() => {
         if (status === 'success') {
             closeModal();
-        }
-
-        if (status === 'error') {
-            reset();
         }
     }, [status]);
 

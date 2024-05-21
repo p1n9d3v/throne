@@ -45,10 +45,6 @@ function SignUp() {
         if (status === 'success') {
             closeModal();
         }
-
-        if (status === 'error') {
-            reset();
-        }
     }, [status]);
 
     return (
