@@ -7,38 +7,32 @@ import Input from '../ui/Input';
 import Button from '../ui/Button';
 import useAuth from '@/hooks/useAuth';
 import useModal from '@/hooks/useModal';
+import { QueryErrorResetBoundary } from '@tanstack/react-query';
 
 interface FormValues {
     email: string;
     password: string;
-    confirmPassword: string;
 }
 
 const schema = yup.object({
     email: yup.string().email().required(),
     password: yup.string().min(6).required(),
-    confirmPassword: yup
-        .string()
-        .required()
-        .oneOf([yup.ref('password'), ''], 'Passwords must match'),
 });
 
-function SignUp() {
+function SignIn() {
     const { closeModal } = useModal();
     const { register, handleSubmit, resetField, reset, formState } =
         useForm<FormValues>({
             resolver: yupResolver(schema),
         });
+
     const {
-        signupWithEmailAndPasswordMutation: { mutate: signup, status },
+        signinWithEmailAndPasswordMutation: { mutate: signin, status },
     } = useAuth();
 
-    const onSignUpSubmit = async (data: FormValues) => {
+    const onSignInSubmit = async (data: FormValues) => {
         const { email, password } = data;
-        await signup({
-            email,
-            password,
-        });
+        signin({ email, password });
     };
 
     React.useEffect(() => {
@@ -52,11 +46,11 @@ function SignUp() {
     }, [status]);
 
     return (
-        <form onSubmit={handleSubmit(onSignUpSubmit)} className={styles.SignUp}>
-            <h1 className={styles.SignUp__title}>Sign Up</h1>
+        <form onSubmit={handleSubmit(onSignInSubmit)} className={styles.SignIn}>
+            <h1 className={styles.SignIn__title}>Sign In</h1>
             {status === 'error' && (
                 <div style={{ color: 'red', textAlign: 'right' }}>
-                    회원가입을 다시 시도해주세요
+                    로그인에 실패하였습니다. 다시 시도해주세요.
                 </div>
             )}
             <Input
@@ -75,14 +69,6 @@ function SignUp() {
                 onClear={() => resetField('password')}
                 error={formState.errors.password?.message}
             />
-            <Input
-                type="password"
-                placeholder="Confirm Password"
-                {...register('confirmPassword')}
-                size="medium"
-                onClear={() => resetField('password')}
-                error={formState.errors.confirmPassword?.message}
-            />
             <Button
                 size="large"
                 variant="contained"
@@ -92,10 +78,10 @@ function SignUp() {
                     marginLeft: 'auto',
                 }}
             >
-                Signup
+                SignIn
             </Button>
         </form>
     );
 }
 
-export default SignUp;
+export default SignIn;
