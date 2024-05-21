@@ -1,10 +1,12 @@
-import { signupWithEmailAndPass } from '@/api/auth';
+import React from 'react';
 import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import styles from './index.module.css';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import useAuth from '@/hooks/useAuth';
+import useModal from '@/hooks/useModal';
 
 interface FormValues {
     email: string;
@@ -22,17 +24,41 @@ const schema = yup.object({
 });
 
 function SignUp() {
-    const { register, handleSubmit, resetField, formState } =
+    const { closeModal } = useModal();
+    const { register, handleSubmit, resetField, reset, formState } =
         useForm<FormValues>({
             resolver: yupResolver(schema),
         });
+    const {
+        signupWithEmailAndPasswordMutation: { mutateAsync: signup, status },
+    } = useAuth();
+
     const onSignUpSubmit = async (data: FormValues) => {
         const { email, password } = data;
-        const user = await signupWithEmailAndPass(email, password);
+        await signup({
+            email,
+            password,
+        });
     };
+
+    React.useEffect(() => {
+        if (status === 'success') {
+            closeModal();
+        }
+
+        if (status === 'error') {
+            reset();
+        }
+    }, [status]);
+
     return (
         <form onSubmit={handleSubmit(onSignUpSubmit)} className={styles.SignUp}>
             <h1 className={styles.SignUp__title}>Sign Up</h1>
+            {status === 'error' && (
+                <div style={{ color: 'red', textAlign: 'right' }}>
+                    회원가입을 다시 시도해주세요
+                </div>
+            )}
             <Input
                 type="email"
                 placeholder="Email"

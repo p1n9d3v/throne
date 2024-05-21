@@ -2,7 +2,8 @@
 
 import React from 'react';
 import styles from './index.module.css';
-import { useModal } from '@/context/atom';
+import useAuth from '@/hooks/useAuth';
+import useModal from '@/hooks/useModal';
 
 interface Props {}
 
@@ -12,7 +13,8 @@ function Header() {
     return (
         <header className={styles.Header}>
             <div className={styles.Header_title}>Trone</div>
-            <button onClick={() => openModal('signup')}>Login</button>
+            <button onClick={() => openModal('signin')}>Login</button>
+            <button onClick={() => openModal('signup')}>SignUp</button>
         </header>
     );
 }

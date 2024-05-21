@@ -1,12 +1,13 @@
 import React from 'react';
-import Signup from '@/components/SignUp';
-import { atom, selector, useRecoilValue, useSetRecoilState } from 'recoil';
+import SignUp from '@/components/SignUp';
+import { atom, selector } from 'recoil';
+import SignIn from '@/components/SignIn';
 
 interface ModalState {
     isOpen: boolean;
     view: string;
 }
-const modalAtom = atom<ModalState>({
+export const modalAtom = atom<ModalState>({
     key: 'modal',
     default: {
         isOpen: false,
@@ -14,16 +15,7 @@ const modalAtom = atom<ModalState>({
     },
 });
 
-const convertViewToComponent = (view: string) => {
-    switch (view) {
-        case 'signup':
-            return <Signup />;
-        default:
-            return null;
-    }
-};
-
-const modalSelector = selector({
+export const modalSelector = selector({
     key: 'modalSelector',
     get: ({ get }) => ({
         ...get(modalAtom),
@@ -31,24 +23,13 @@ const modalSelector = selector({
     }),
 });
 
-export const useModal = () => {
-    const { isOpen, view } = useRecoilValue(modalSelector);
-    const setModalState = useSetRecoilState(modalAtom);
-
-    const openModal = (view: string) => {
-        setModalState((prev) => ({
-            ...prev,
-            isOpen: true,
-            view,
-        }));
-    };
-
-    const closeModal = () => {
-        setModalState((prev) => ({
-            ...prev,
-            isOpen: false,
-            view: '',
-        }));
-    };
-    return { isOpen, view, openModal, closeModal };
+const convertViewToComponent = (view: string) => {
+    switch (view) {
+        case 'signup':
+            return <SignUp />;
+        case 'signin':
+            return <SignIn />;
+        default:
+            return null;
+    }
 };

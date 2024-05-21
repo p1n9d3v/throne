@@ -1,10 +1,12 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import Header from './layouts/Header';
 import cx from 'classnames';
 import RecoilRootWrapper from '@/context/RecoilWrapper';
-import { notoSans, notoSansKR } from './styles/fonts.ts';
 import './styles/global.css';
 import ModalProvider from './components/Modal/provider';
+import { notoSans, notoSansKR } from './styles/fonts';
+import ReactQueryWrapper from './context/ReactQueryWrapper';
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -19,11 +21,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={cx(notoSans.className, notoSansKR.className)}>
-                <RecoilRootWrapper>
-                    <Header />
-                    {children}
-                    <ModalProvider />
-                </RecoilRootWrapper>
+                <ReactQueryWrapper>
+                    <RecoilRootWrapper>
+                        <Header />
+                        {children}
+                        <ModalProvider />
+                    </RecoilRootWrapper>
+                </ReactQueryWrapper>
             </body>
         </html>
     );

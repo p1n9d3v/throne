@@ -1,4 +1,7 @@
-import { signupWithEmailAndPass } from '@/api/auth';
+import {
+    signinWithEmailAndPassword,
+    signupWithEmailAndPassword,
+} from '@/api/auth';
 import '@testing-library/jest-dom';
 import {
     RulesTestEnvironment,
@@ -32,8 +35,19 @@ describe('Auth', () => {
         const password = 'testpassword';
 
         const user = await assertSucceeds(
-            signupWithEmailAndPass(email, password),
+            signupWithEmailAndPassword(email, password),
         );
+        expect(user.email).toBe(email);
+    });
+
+    test('signin with email and password', async () => {
+        const email = 'test@gmail.com';
+        const password = 'testpassword';
+
+        const user = await assertSucceeds(
+            signinWithEmailAndPassword(email, password),
+        );
+
         expect(user.email).toBe(email);
     });
 });

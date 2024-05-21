@@ -1,7 +1,6 @@
 'use client';
 
-import { useModal } from '@/context/atom';
-
+import useModal from '@/hooks/useModal';
 import Modal from '.';
 
 function ModalProvider() {
