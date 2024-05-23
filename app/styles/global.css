@@ -22,6 +22,7 @@
     --gray-100: #f3f4f6;
 
     --primary-color: #9751b6;
+    --border-color: var(--gray-300);
     --dark-color: var(--gray-800);
 }
 

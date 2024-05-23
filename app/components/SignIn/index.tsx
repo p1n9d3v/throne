@@ -7,6 +7,8 @@ import Input from '../ui/Input';
 import Button from '../ui/Button';
 import useAuth from '@/hooks/useAuth';
 import useModal from '@/hooks/useModal';
+import Border from '../ui/Border';
+import OAuthButton from '../ui/OAuthButton';
 
 interface FormValues {
     email: string;
@@ -64,6 +66,11 @@ function SignIn() {
                 onClear={() => resetField('password')}
                 error={formState.errors.password?.message}
             />
+
+            <Border text={'Social'} />
+            <div>
+                <OAuthButton oauth="google" />
+            </div>
             <Button
                 size="large"
                 variant="contained"
