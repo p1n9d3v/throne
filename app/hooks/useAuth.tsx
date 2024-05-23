@@ -2,6 +2,7 @@ import React from 'react';
 import {
     getAuthStateChanged,
     signinWithEmailAndPassword,
+    signinWithGoogle,
     signupWithEmailAndPassword,
 } from '@/api/auth';
 import { useMutation } from '@tanstack/react-query';
@@ -39,10 +40,15 @@ function useAuth() {
             signinWithEmailAndPassword(email, password),
     });
 
+    const signinWithGoogleMutation = useMutation<User, FirebaseError, any>({
+        mutationFn: signinWithGoogle,
+    });
+
     return {
         user,
         signupWithEmailAndPasswordMutation,
         signinWithEmailAndPasswordMutation,
+        signinWithGoogleMutation,
     };
 }
 

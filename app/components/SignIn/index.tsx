@@ -28,7 +28,14 @@ function SignIn() {
         });
 
     const {
-        signinWithEmailAndPasswordMutation: { mutate: signin, status },
+        signinWithEmailAndPasswordMutation: {
+            mutate: signin,
+            status: signinStatus,
+        },
+        signinWithGoogleMutation: {
+            mutate: signinWithGoogle,
+            status: signinGoogleStatus,
+        },
     } = useAuth();
 
     const onSignInSubmit = async (data: FormValues) => {
@@ -37,15 +44,15 @@ function SignIn() {
     };
 
     React.useEffect(() => {
-        if (status === 'success') {
+        if (signinStatus === 'success' || signinGoogleStatus === 'success') {
             closeModal();
         }
-    }, [status]);
+    }, [signinStatus, signinGoogleStatus]);
 
     return (
         <form onSubmit={handleSubmit(onSignInSubmit)} className={styles.SignIn}>
             <h1 className={styles.SignIn__title}>Sign In</h1>
-            {status === 'error' && (
+            {signinStatus === 'error' && (
                 <div style={{ color: 'red', textAlign: 'right' }}>
                     로그인에 실패하였습니다. 다시 시도해주세요.
                 </div>
@@ -66,11 +73,6 @@ function SignIn() {
                 onClear={() => resetField('password')}
                 error={formState.errors.password?.message}
             />
-
-            <Border text={'Social'} />
-            <div>
-                <OAuthButton oauth="google" />
-            </div>
             <Button
                 size="large"
                 variant="contained"
@@ -80,8 +82,13 @@ function SignIn() {
                     marginLeft: 'auto',
                 }}
             >
-                SignIn
+                로그인
             </Button>
+
+            <Border text={'Social'} />
+            <div>
+                <OAuthButton oauth="google" onClick={signinWithGoogle} />
+            </div>
         </form>
     );
 }

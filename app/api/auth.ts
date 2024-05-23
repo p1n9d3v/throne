@@ -2,6 +2,8 @@ import {
     createUserWithEmailAndPassword,
     onAuthStateChanged,
     signInWithEmailAndPassword,
+    GoogleAuthProvider,
+    signInWithPopup,
 } from 'firebase/auth';
 import { auth } from './config';
 
@@ -36,3 +38,8 @@ export const signinWithEmailAndPassword = async (
 };
 
 export const getAuthStateChanged = onAuthStateChanged.bind(null, auth);
+
+export const signinWithGoogle = async () => {
+    const result = await signInWithPopup(auth, new GoogleAuthProvider());
+    return result.user;
+};
