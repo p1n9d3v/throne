@@ -24,10 +24,15 @@
     --primary-color: #9751b6;
     --border-color: var(--gray-300);
     --dark-color: var(--gray-800);
+    --background-color: #130c29;
 }
 
 html {
     font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 * {
