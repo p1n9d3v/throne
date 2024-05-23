@@ -51,7 +51,6 @@ function SignIn() {
 
     return (
         <form onSubmit={handleSubmit(onSignInSubmit)} className={styles.SignIn}>
-            <h1 className={styles.SignIn__title}>Sign In</h1>
             {signinStatus === 'error' && (
                 <div style={{ color: 'red', textAlign: 'right' }}>
                     로그인에 실패하였습니다. 다시 시도해주세요.

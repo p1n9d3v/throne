@@ -2,6 +2,7 @@ import React from 'react';
 import SignUp from '@/components/SignUp';
 import { atom, selector } from 'recoil';
 import SignIn from '@/components/SignIn';
+import Sign from '@/components/Sign';
 
 interface ModalState {
     isOpen: boolean;
@@ -25,10 +26,8 @@ export const modalSelector = selector({
 
 const convertViewToComponent = (view: string) => {
     switch (view) {
-        case 'signup':
-            return <SignUp />;
-        case 'signin':
-            return <SignIn />;
+        case 'sign':
+            return <Sign />;
         default:
             return null;
     }

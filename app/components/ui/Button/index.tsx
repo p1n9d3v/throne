@@ -5,7 +5,7 @@ import styles from './index.module.css';
 interface Props
     extends React.ComponentProps<'button'>,
         React.PropsWithChildren {
-    color: 'primary';
+    color?: 'primary';
     variant: 'contained' | 'outlined' | 'text';
     size?: 'small' | 'medium' | 'large';
     fullWidth?: boolean;

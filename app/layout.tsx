@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cx(notoSans.className, notoSansKR.className)}>
+            <body
+                id="next"
+                className={cx(notoSans.className, notoSansKR.className)}
+            >
                 <ReactQueryWrapper>
                     <RecoilRootWrapper>
                         <Header />

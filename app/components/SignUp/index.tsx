@@ -49,7 +49,6 @@ function SignUp() {
 
     return (
         <form onSubmit={handleSubmit(onSignUpSubmit)} className={styles.SignUp}>
-            <h1 className={styles.SignUp__title}>Sign Up</h1>
             {status === 'error' && (
                 <div style={{ color: 'red', textAlign: 'right' }}>
                     회원가입을 다시 시도해주세요
@@ -88,7 +87,7 @@ function SignUp() {
                     marginLeft: 'auto',
                 }}
             >
-                Signup
+                회원가입
             </Button>
         </form>
     );
