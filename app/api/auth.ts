@@ -4,6 +4,7 @@ import {
     signInWithEmailAndPassword,
     GoogleAuthProvider,
     signInWithPopup,
+    signOut,
 } from 'firebase/auth';
 import { auth } from './config';
 
@@ -41,5 +42,8 @@ export const getAuthStateChanged = onAuthStateChanged.bind(null, auth);
 
 export const signinWithGoogle = async () => {
     const result = await signInWithPopup(auth, new GoogleAuthProvider());
+
     return result.user;
 };
+
+export const signout = signOut.bind(null, auth);

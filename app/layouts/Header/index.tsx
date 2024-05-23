@@ -9,14 +9,25 @@ interface Props {}
 
 function Header() {
     const { openModal } = useModal();
+    const { user, signout } = useAuth();
 
     return (
         <header className={styles.Header}>
-            <div className={styles.Header_title}>Trone</div>
-            <button onClick={() => openModal('sign')} style={{ color: '#fff' }}>
-                Login
-            </button>
-            <button onClick={() => openModal('signup')}>SignUp</button>
+            <div className={styles.Header__Title}>Trone</div>
+            <div className={styles.Header__Sign}>
+                {!!user ? (
+                    <button
+                        onClick={() => {
+                            signout();
+                            location.reload();
+                        }}
+                    >
+                        logout
+                    </button>
+                ) : (
+                    <button onClick={() => openModal('sign')}>login</button>
+                )}
+            </div>
         </header>
     );
 }

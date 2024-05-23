@@ -4,6 +4,7 @@ import {
     signinWithEmailAndPassword,
     signinWithGoogle,
     signupWithEmailAndPassword,
+    signout,
 } from '@/api/auth';
 import { useMutation } from '@tanstack/react-query';
 import { FirebaseError } from 'firebase/app';
@@ -49,6 +50,7 @@ function useAuth() {
         signupWithEmailAndPasswordMutation,
         signinWithEmailAndPasswordMutation,
         signinWithGoogleMutation,
+        signout,
     };
 }
 
