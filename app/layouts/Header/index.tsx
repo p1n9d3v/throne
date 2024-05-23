@@ -13,7 +13,7 @@ function Header() {
 
     return (
         <header className={styles.Header}>
-            <div className={styles.Header__Title}>Trone</div>
+            <div className={styles.Header__Title}>Trone And Gear</div>
             <div className={styles.Header__Sign}>
                 {!!user ? (
                     <button
