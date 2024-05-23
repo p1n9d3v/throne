@@ -53,6 +53,7 @@ const Input = React.forwardRef<HTMLInputElement, Props & UseFormRegisterReturn>(
                     <input
                         {...otherProps}
                         ref={ref}
+                        autoComplete="off"
                         onChange={handleInputChange}
                     />
                     {hasValue && !!onClear && (

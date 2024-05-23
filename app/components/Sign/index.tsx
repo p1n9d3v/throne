@@ -18,7 +18,9 @@ function Sign() {
 
     return (
         <div>
-            <h1 className={styles.Sign__title}>Sign In</h1>
+            <h1 className={styles.Sign__title}>
+                {tab ? '회원가입' : '로그인'}
+            </h1>
             {SIGN[tab]}
             <div className={styles.Sign__navigator}>
                 <Button

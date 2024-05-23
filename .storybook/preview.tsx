@@ -17,6 +17,13 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        backgrounds: {
+            default: 'dark',
+            values: [
+                { name: 'dark', value: 'var(--background-color)' },
+                { name: 'white', value: '#fff' },
+            ],
+        },
     },
     decorators: [
         (Story) => (
