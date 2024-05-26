@@ -16,6 +16,7 @@
     background-color: var(--gray-900);
     border-radius: 0.8rem;
     padding: 3.6rem 2.4rem 1.2rem 2.4rem;
+    width: fit-content;
 }
 
 .Modal__close {
