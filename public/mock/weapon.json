@@ -1,0 +1,61 @@
+[
+    {
+        "name": "쥬노보트의 파괴검",
+        "type": "양손검",
+        "quality": "영웅",
+        "img": "https://imgur.com/8f9Yb8g.png",
+        "skill": {
+            "value": 0.5,
+            "description": "양손검 스킬로 생명력 50% 이하의 적에게 기절, 충격 적중 시 해당 효과의 지속 시간 {value}초 증가"
+        },
+        "description": "실라베스 교단의 마지막 대장로, 쥬노보트의 방심의 환각을 불러 일으키는 힘이 깃든 대검",
+        "damage": {
+            "min": 51,
+            "max": 239
+        },
+        "stat": [
+            {
+                "name": "공격 거리",
+                "value": "2.5"
+            },
+            {
+                "name": "공격 속도",
+                "value": "0.8"
+            },
+            {
+                "name": "통찰",
+                "value": "8"
+            },
+            {
+                "name": "기절 적중",
+                "value": "136"
+            }
+        ],
+        "attributes": [
+            {
+                "name": "명중",
+                "value": 20
+            },
+            {
+                "name": "치명타",
+                "value": 20
+            },
+            {
+                "name": "강타 적중",
+                "value": 20
+            },
+            {
+                "name": "동물류 추가 피해량",
+                "value": 4
+            },
+            {
+                "name": "마나 재생",
+                "value": 15
+            },
+            {
+                "name": "스킬 재사용 속도",
+                "value": 1.5
+            }
+        ]
+    }
+]

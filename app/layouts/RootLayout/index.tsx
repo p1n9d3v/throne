@@ -7,7 +7,7 @@ import cx from 'classnames';
 
 function RootLayout({ children }: React.PropsWithChildren) {
     return (
-        <div className={cx(notoSans.className, notoSansKR.className)}>
+        <div id="next" className={cx(notoSans.className, notoSansKR.className)}>
             <Header />
             <main>{children}</main>
             <ModalProvider />
