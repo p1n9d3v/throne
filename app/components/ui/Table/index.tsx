@@ -30,7 +30,9 @@ function Table<T>({ defaultData, columns }: Props<T>) {
                 columns.map((col) =>
                     columnHelper.accessor(col.key as any, {
                         header: col.header,
-                        cell: (props) => col.cell?.(props.getValue()),
+                        cell: col.cell
+                            ? (props) => col.cell?.(props.getValue())
+                            : (props) => props.getValue(),
                     }),
                 ),
             [columns],

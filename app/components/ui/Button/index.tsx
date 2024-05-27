@@ -14,6 +14,7 @@ interface Props
 function Button({
     size,
     color = 'primary',
+    fullWidth,
     variant,
     children,
     ...otherProps
@@ -26,6 +27,7 @@ function Button({
                     [styles.Button__large]: size === 'large',
                     [styles.Button__medium]: size === 'medium',
                     [styles.Button__small]: size === 'small',
+                    [styles.Button__fullWidth]: !!fullWidth,
                 },
                 {
                     [styles.Button__contained]: variant === 'contained',
@@ -41,7 +43,6 @@ function Button({
                         variant === 'text' && color === 'primary',
                 },
             )}
-            style={{ width: otherProps.fullWidth ? '100%' : 'fit-content' }}
             {...otherProps}
         >
             {children}

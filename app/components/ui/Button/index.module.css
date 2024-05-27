@@ -5,6 +5,15 @@
     width: fit-content;
 }
 
+.Button__fullWidth {
+    width: 100%;
+    padding: 1.2rem 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
 .Button__large {
     padding: 1.2rem 1.8rem;
     font-size: 1.4rem;

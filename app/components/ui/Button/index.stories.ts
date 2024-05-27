@@ -18,6 +18,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const FullWidth: Story = {
+    parameters: {
+        layout: 'fullscreen',
+    },
     args: {
         variant: 'contained',
         color: 'primary',
