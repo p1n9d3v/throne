@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    Header,
     createColumnHelper,
     flexRender,
     getCoreRowModel,
@@ -9,34 +8,30 @@ import {
 import styles from './index.module.css';
 import cx from 'classnames';
 
-type Column = {
-    key: string;
-    header: string;
-    cell?: (props: any) => any;
-    size?: number;
-};
-
 interface Props<T> {
     columns: Column[];
     defaultData: T[];
     headerStyle?: React.CSSProperties;
-    align?: 'left' | 'center' | 'right';
 }
 
-function Table<T>({ defaultData, columns, headerStyle, align }: Props<T>) {
+function Table<T>({ defaultData, columns, headerStyle }: Props<T>) {
     const data = React.useMemo(() => defaultData, [defaultData]);
     const columnHelper = createColumnHelper<T>();
     const table = useReactTable({
         data,
         columns: React.useMemo(
             () =>
-                columns.map((col) =>
+                columns.map((col: any) =>
                     columnHelper.accessor(col.key as any, {
                         header: col.header,
                         cell: col.cell
-                            ? (props) => col.cell?.(props.getValue())
+                            ? (props) => col.cell?.(props)
                             : (props) => props.getValue(),
                         size: col.size,
+                        meta: {
+                            align: col.align ? col.align : 'center',
+                            valign: col.valign ? col.valign : 'middle',
+                        },
                     }),
                 ),
             [columns],
@@ -50,22 +45,28 @@ function Table<T>({ defaultData, columns, headerStyle, align }: Props<T>) {
                 <thead className={cx(styles.Table__header, headerStyle)}>
                     {table.getHeaderGroups().map((headerGroup) => (
                         <tr key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => (
-                                <th
-                                    key={header.id}
-                                    colSpan={header.colSpan}
-                                    style={{
-                                        width: `${header.getSize()}px`,
-                                    }}
-                                >
-                                    {header.isPlaceholder
-                                        ? null
-                                        : flexRender(
-                                              header.column.columnDef.header,
-                                              header.getContext(),
-                                          )}
-                                </th>
-                            ))}
+                            {headerGroup.headers.map((header) => {
+                                return (
+                                    <th
+                                        key={header.id}
+                                        colSpan={header.colSpan}
+                                        style={{
+                                            width:
+                                                header.getSize() !== 150 // default size
+                                                    ? `${header.getSize()}px`
+                                                    : 'auto',
+                                        }}
+                                    >
+                                        {header.isPlaceholder
+                                            ? null
+                                            : flexRender(
+                                                  header.column.columnDef
+                                                      .header,
+                                                  header.getContext(),
+                                              )}
+                                    </th>
+                                );
+                            })}
                         </tr>
                     ))}
                 </thead>
@@ -73,7 +74,15 @@ function Table<T>({ defaultData, columns, headerStyle, align }: Props<T>) {
                     {table.getRowModel().rows.map((row) => (
                         <tr key={row.id}>
                             {row.getVisibleCells().map((cell) => (
-                                <td key={cell.id} align={align}>
+                                <td
+                                    key={cell.id}
+                                    style={{
+                                        textAlign:
+                                            cell.column.columnDef.meta!.align,
+                                        verticalAlign:
+                                            cell.column.columnDef.meta!.valign,
+                                    }}
+                                >
                                     {flexRender(
                                         cell.column.columnDef.cell,
                                         cell.getContext(),

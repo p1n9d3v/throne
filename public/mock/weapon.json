@@ -4,10 +4,19 @@
         "type": "양손검",
         "quality": "영웅",
         "img": "https://tlcodex.com/icons/icon/item_128/equip/weapon/it_p_sword2h_00039.webp",
-        "skill": {
-            "value": 0.5,
-            "description": "양손검 스킬로 생명력 50% 이하의 적에게 기절, 충격 적중 시 해당 효과의 지속 시간 {value}초 증가"
-        },
+        "skill": [
+            {
+                "title": "쥬노보트의 공허",
+                "img": "https://tlcodex.com/icons/skill/active/s_si_weapon_07.webp",
+                "value": [
+                    {
+                        "value": 0.5,
+                        "increase": 0.5
+                    }
+                ],
+                "description": "양손검 스킬로 생명력 50% 이하의 적에게 기절, 충격 적중 시 해당 효과의 지속 시간 {value}초 증가"
+            }
+        ],
         "description": "실라베스 교단의 마지막 대장로, 쥬노보트의 방심의 환각을 불러 일으키는 힘이 깃든 대검",
         "damage": {
             "min": 51,
@@ -16,19 +25,19 @@
         "stat": [
             {
                 "name": "공격 거리",
-                "value": "2.5"
+                "value": 2.5
             },
             {
                 "name": "공격 속도",
-                "value": "0.8"
+                "value": 0.8
             },
             {
                 "name": "통찰",
-                "value": "8"
+                "value": 8
             },
             {
                 "name": "기절 적중",
-                "value": "136"
+                "value": 136
             }
         ],
         "attributes": [
@@ -55,6 +64,224 @@
             {
                 "name": "스킬 재사용 속도",
                 "value": 1.5
+            }
+        ]
+    },
+
+    {
+        "name": "테벤트의 절망검",
+        "type": "양손검",
+        "quality": "영웅",
+        "img": "https://tlcodex.com/icons/icon/item_128/equip/weapon/it_p_sword2h_00036.webp",
+        "skill": [
+            {
+                "title": "테벤트의 절망덫",
+                "img": "https://tlcodex.com/icons/skill/active/s_si_weapon_07.webp",
+                "value": [
+                    {
+                        "value": 175,
+                        "increase": 50
+                    }
+                ],
+                "description": "양손검 스킬로 기절, 충돌, 충격 적중 시 대상 위치에 1.5초 후에 폭발하며 기본 피해의 {value}% 만큼 피해를 주는 반경 1.5m 영역 생성"
+            }
+        ],
+        "description": "마력에 굶주린 고대 투르티잔의 쿠르트였던, 쿠훌 테벤트의 절망덫을 소환하는 대검",
+        "damage": {
+            "min": 121,
+            "max": 225
+        },
+        "stat": [
+            {
+                "name": "공격 거리",
+                "value": 2.5
+            },
+            {
+                "name": "공격 속도",
+                "value": 0.743
+            },
+            {
+                "name": "투지",
+                "value": 5
+            },
+            {
+                "name": "기량",
+                "value": 4
+            },
+            {
+                "name": "기절 적중",
+                "value": 50
+            }
+        ],
+        "attributes": [
+            {
+                "name": "명중",
+                "value": 20
+            },
+            {
+                "name": "치명타",
+                "value": 20
+            },
+            {
+                "name": "강타 적중",
+                "value": 20
+            },
+            {
+                "name": "영혼류 추가 피해량",
+                "value": 4
+            },
+            {
+                "name": "최대 생명력",
+                "value": 150
+            },
+            {
+                "name": "약화 지속 시간",
+                "value": -1.5
+            }
+        ]
+    },
+    {
+        "name": "심판대장의 지진검",
+        "type": "양손검",
+        "quality": "영웅 2단",
+        "img": "https://tlcodex.com/icons/icon/item_128/equip/weapon/it_p_sword2h_00007.webp",
+        "skill": [
+            {
+                "title": "심판의 파동",
+                "img": "https://tlcodex.com/icons/skill/active/s_si_weapon_41.webp",
+                "value": [
+                    {
+                        "value": 8,
+                        "increase": 0
+                    }
+                ],
+                "description": "대지 가르기 스킬 영역이 앞으로 나아가지 않고 동일한 위치만 4회 공격하도록 변경. 마지막 공격은 범위 33%, 피해량 {value}% 증폭"
+            }
+        ],
+        "description": "대지의 힘을 심판하는 자의 검, 적에게 대지의 파동을 내리친다.",
+        "damage": {
+            "min": 104,
+            "max": 191
+        },
+        "stat": [
+            {
+                "name": "공격 거리",
+                "value": 2.5
+            },
+            {
+                "name": "공격 속도",
+                "value": 0.675
+            },
+            {
+                "name": "투지",
+                "value": 7
+            },
+            {
+                "name": "명중",
+                "value": 60
+            },
+            {
+                "name": "충돌 적중",
+                "value": 25
+            }
+        ],
+        "attributes": [
+            {
+                "name": "명중",
+                "value": 20
+            },
+            {
+                "name": "치명타",
+                "value": 20
+            },
+            {
+                "name": "강타 적중",
+                "value": 20
+            },
+            {
+                "name": "기절 적중",
+                "value": 25
+            },
+            {
+                "name": "최대 생명력",
+                "value": 150
+            },
+            {
+                "name": "강화 지속 시간",
+                "value": 1.5
+            }
+        ]
+    },
+
+    {
+        "name": "지옥 문지기의 질풍검",
+        "type": "양손검",
+        "quality": "영웅 2단",
+        "img": "https://tlcodex.com/icons/icon/item_128/equip/weapon/it_p_sword2h_00010.webp",
+        "skill": [
+            {
+                "title": "작열 회오리",
+                "img": "https://tlcodex.com/icons/skill/active/s_si_weapon_41.webp",
+                "value": [
+                    {
+                        "value": 50,
+                        "increase": 10
+                    }
+                ],
+                "description": "섬멸 회오리 스킬의 공격 속도가 50%, 사용 중 이동 속도가 10% 증가하고, 공격할 때마다 연발 불꽃탄 스킬과 동일한 착화 효과 적용"
+            }
+        ],
+        "description": "지옥의 문지기가 사용하는 질풍검으로, 공격할 때마다 불꽃탄을 발사하여 적을 불태운다.",
+        "damage": {
+            "min": 132,
+            "max": 190
+        },
+        "stat": [
+            {
+                "name": "공격 거리",
+                "value": 3.0
+            },
+            {
+                "name": "공격 속도",
+                "value": 0.776
+            },
+            {
+                "name": "통찰",
+                "value": 5
+            },
+            {
+                "name": "지혜",
+                "value": 3
+            },
+            {
+                "name": "기절 적중",
+                "value": 75
+            }
+        ],
+        "attributes": [
+            {
+                "name": "명중",
+                "value": 20
+            },
+            {
+                "name": "치명타",
+                "value": 20
+            },
+            {
+                "name": "강타 적중",
+                "value": 20
+            },
+            {
+                "name": "충돌 적중",
+                "value": 25
+            },
+            {
+                "name": "최대 생명력",
+                "value": 150
+            },
+            {
+                "name": "추가 공격 속도",
+                "value": 2
             }
         ]
     }

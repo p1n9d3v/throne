@@ -32,7 +32,6 @@ export const Default: Story = {
             <div>
                 <Story
                     args={{
-                        align: 'center',
                         columns: [
                             {
                                 key: 'name',
