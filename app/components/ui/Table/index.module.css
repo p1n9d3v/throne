@@ -1,0 +1,28 @@
+.Table {
+    width: 100%;
+    border: 1px solid var(--gray-500);
+    border-radius: 0.8rem;
+    overflow: auto;
+}
+
+.Table table {
+    width: 100%;
+}
+
+.Table__header {
+    background-color: var(--gray-700);
+}
+
+.Table__header tr {
+    border-bottom: 1px solid var(--gray-500);
+    color: var(--gray-700);
+}
+
+.Table__header th {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+}
+
+.Table__body td {
+    font-size: 1.4rem;
+}

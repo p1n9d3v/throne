@@ -3,7 +3,7 @@
         "name": "쥬노보트의 파괴검",
         "type": "양손검",
         "quality": "영웅",
-        "img": "https://imgur.com/8f9Yb8g.png",
+        "img": "https://tlcodex.com/icons/icon/item_128/equip/weapon/it_p_sword2h_00039.webp",
         "skill": {
             "value": 0.5,
             "description": "양손검 스킬로 생명력 50% 이하의 적에게 기절, 충격 적중 시 해당 효과의 지속 시간 {value}초 증가"

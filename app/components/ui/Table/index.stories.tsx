@@ -16,12 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         defaultData: [],
-        columns: [
-            {
-                key: 'name',
-                header: 'Name',
-            },
-        ],
+        columns: [],
     },
     decorators: (Story) => {
         const [data, setData] = React.useState([]);
@@ -37,6 +32,7 @@ export const Default: Story = {
             <div>
                 <Story
                     args={{
+                        align: 'center',
                         columns: [
                             {
                                 key: 'name',
