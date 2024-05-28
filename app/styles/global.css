@@ -35,6 +35,8 @@
     --border-color: var(--gray-300);
     --dark-color: var(--gray-800);
     --background-color: #130c29;
+
+    --horizontal-padding: 2.4rem;
 }
 
 html {

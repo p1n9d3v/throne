@@ -1,38 +1,41 @@
-[debug] [2024-05-26T04:24:21.534Z] ----------------------------------------------------------------------
-[debug] [2024-05-26T04:24:21.535Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase emulators:start --import=./firebase_mock/ --export-on-exit
-[debug] [2024-05-26T04:24:21.535Z] CLI Version:   13.0.3
-[debug] [2024-05-26T04:24:21.536Z] Platform:      darwin
-[debug] [2024-05-26T04:24:21.536Z] Node Version:  v21.6.1
-[debug] [2024-05-26T04:24:21.536Z] Time:          Sun May 26 2024 13:24:21 GMT+0900 (Korean Standard Time)
-[debug] [2024-05-26T04:24:21.536Z] ----------------------------------------------------------------------
+[debug] [2024-05-28T09:27:28.791Z] ----------------------------------------------------------------------
+[debug] [2024-05-28T09:27:28.792Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase emulators:start --import=./firebase_mock/ --export-on-exit
+[debug] [2024-05-28T09:27:28.792Z] CLI Version:   13.0.3
+[debug] [2024-05-28T09:27:28.793Z] Platform:      darwin
+[debug] [2024-05-28T09:27:28.793Z] Node Version:  v21.6.1
+[debug] [2024-05-28T09:27:28.793Z] Time:          Tue May 28 2024 18:27:28 GMT+0900 (Korean Standard Time)
+[debug] [2024-05-28T09:27:28.793Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-05-26T04:24:21.587Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-05-26T04:24:21.587Z] > authorizing via signed-in user (p1n9m4i1@gmail.com)
-[debug] [2024-05-26T04:24:21.977Z] openjdk version "21.0.2" 2024-01-16 LTS
+[debug] [2024-05-28T09:27:28.794Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-05-28T09:27:28.843Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-28T09:27:28.843Z] > authorizing via signed-in user (p1n9m4i1@gmail.com)
+[debug] [2024-05-28T09:27:28.979Z] openjdk version "21.0.2" 2024-01-16 LTS
 
-[debug] [2024-05-26T04:24:21.977Z] OpenJDK Runtime Environment Temurin-21.0.2+13 (build 21.0.2+13-LTS)
+[debug] [2024-05-28T09:27:28.979Z] OpenJDK Runtime Environment Temurin-21.0.2+13 (build 21.0.2+13-LTS)
 OpenJDK 64-Bit Server VM Temurin-21.0.2+13 (build 21.0.2+13-LTS, mixed mode)
 
-[debug] [2024-05-26T04:24:21.980Z] Parsed Java major version: 21
+[debug] [2024-05-28T09:27:28.982Z] Parsed Java major version: 21
 [info] i  emulators: Starting emulators: auth, firestore, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore, database, storage"}}
-[debug] [2024-05-26T04:24:22.488Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.488Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.488Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.489Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.489Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.489Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-26T04:24:22.489Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2024-05-26T04:24:22.492Z] [hub] writing locator at /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/hub-react-chat-751fb.json
+[debug] [2024-05-28T09:27:29.506Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.506Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.506Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.506Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.506Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.507Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-05-28T09:27:29.507Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-05-28T09:27:29.511Z] [hub] writing locator at /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/hub-react-chat-751fb.json
 [info] i  firestore: Importing data from /Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from /Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata"}}
-[debug] [2024-05-26T04:24:22.497Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-26T04:24:22.497Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2024-05-26T04:24:22.497Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","react-chat-751fb","--seed_from_export","/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata","--rules","/Users/p1n9/Developments/throne/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"react-chat-751fb\",\"--seed_from_export\",\"/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata\",\"--rules\",\"/Users/p1n9/Developments/throne/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2024-05-28T09:27:29.518Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-05-28T09:27:29.518Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-05-28T09:27:29.518Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","react-chat-751fb","--seed_from_export","/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata","--rules","/Users/p1n9/Developments/throne/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"react-chat-751fb\",\"--seed_from_export\",\"/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata\",\"--rules\",\"/Users/p1n9/Developments/throne/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2024-05-26T04:24:23.328Z] May 26, 2024 1:24:23 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2024-05-28T09:27:29.764Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-05-28T09:27:29.764Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-05-28T09:27:30.145Z] May 28, 2024 6:27:30 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 26, 2024 1:24:23 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
-[debug] [2024-05-26T04:24:23.344Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2024-05-26T04:24:23.344Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"May 28, 2024 6:27:30 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-05-28T09:27:30.160Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-05-28T09:27:30.161Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -41,44 +44,44 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
 [info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2024-05-26T04:24:23.507Z] > refreshing access token with scopes: []
-[debug] [2024-05-26T04:24:23.507Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-05-26T04:24:23.508Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-26T04:24:23.896Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2024-05-26T04:24:23.896Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-05-26T04:24:23.909Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb [none]
-[debug] [2024-05-26T04:24:24.341Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb 200
-[debug] [2024-05-26T04:24:24.342Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb {"projectId":"react-chat-751fb","projectNumber":"614586919878","displayName":"next-throne","name":"projects/react-chat-751fb","resources":{"hostingSite":"react-chat-751fb","realtimeDatabaseInstance":"react-chat-751fb-default-rtdb","storageBucket":"react-chat-751fb.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_7d53dcab-adbe-45dc-b289-cb56dc54ea33"}
-[debug] [2024-05-26T04:24:24.342Z] database rules config:  [{"instance":"react-chat-751fb-default-rtdb","rules":"/Users/p1n9/Developments/throne/database.rules.json"}]
-[debug] [2024-05-26T04:24:24.345Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2024-05-26T04:24:24.345Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-26T04:24:24.345Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2024-05-26T04:24:24.345Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2024-05-28T09:27:30.288Z] > refreshing access token with scopes: []
+[debug] [2024-05-28T09:27:30.289Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-28T09:27:30.289Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-28T09:27:30.669Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-28T09:27:30.669Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-28T09:27:30.682Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb [none]
+[debug] [2024-05-28T09:27:31.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb 200
+[debug] [2024-05-28T09:27:31.284Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb {"projectId":"react-chat-751fb","projectNumber":"614586919878","displayName":"next-throne","name":"projects/react-chat-751fb","resources":{"hostingSite":"react-chat-751fb","realtimeDatabaseInstance":"react-chat-751fb-default-rtdb","storageBucket":"react-chat-751fb.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_7d53dcab-adbe-45dc-b289-cb56dc54ea33"}
+[debug] [2024-05-28T09:27:31.284Z] database rules config:  [{"instance":"react-chat-751fb-default-rtdb","rules":"/Users/p1n9/Developments/throne/database.rules.json"}]
+[debug] [2024-05-28T09:27:31.285Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-05-28T09:27:31.285Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-05-28T09:27:31.285Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-05-28T09:27:31.285Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2024-05-26T04:24:25.196Z] 13:24:25.195 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
- {"metadata":{"emulator":{"name":"database"},"message":"13:24:25.195 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
-[debug] [2024-05-26T04:24:25.285Z] 13:24:25.284 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
- {"metadata":{"emulator":{"name":"database"},"message":"13:24:25.284 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2024-05-28T09:27:31.962Z] 18:27:31.961 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"18:27:31.961 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-05-28T09:27:32.055Z] 18:27:32.055 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"18:27:32.055 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
 [info] i  auth: Importing config from /Users/p1n9/Developments/throne/firebase_mock/auth_export/config.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing config from /Users/p1n9/Developments/throne/firebase_mock/auth_export/config.json"}}
 [info] i  auth: Importing accounts from /Users/p1n9/Developments/throne/firebase_mock/auth_export/accounts.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing accounts from /Users/p1n9/Developments/throne/firebase_mock/auth_export/accounts.json"}}
-[debug] [2024-05-26T04:24:28.710Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2024-05-26T04:24:29.148Z] Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs"}}
-[debug] [2024-05-26T04:24:29.152Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-26T04:24:29.152Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2024-05-26T04:24:29.152Z] Starting Emulator UI with command {"binary":"node","args":["/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2024-05-28T09:27:35.537Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-05-28T09:27:36.177Z] Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs"}}
+[debug] [2024-05-28T09:27:36.181Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-05-28T09:27:36.181Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-05-28T09:27:36.181Z] Starting Emulator UI with command {"binary":"node","args":["/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2024-05-26T04:24:29.219Z] Web / API server started at 127.0.0.1:4000
+[debug] [2024-05-28T09:27:36.265Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2024-05-26T04:24:29.219Z] Web / API server started at ::1:4000
+[debug] [2024-05-28T09:27:36.265Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
-[debug] [2024-05-26T04:24:29.406Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=react-chat-751fb-default-rtdb
-[debug] [2024-05-26T04:24:29.406Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
-[debug] [2024-05-26T04:24:29.612Z] 13:24:29.612 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 71ms, init: 0ms
- {"metadata":{"emulator":{"name":"database"},"message":"13:24:29.612 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 71ms, init: 0ms\n"}}
-[debug] [2024-05-26T04:24:29.639Z] 13:24:29.639 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active
- {"metadata":{"emulator":{"name":"database"},"message":"13:24:29.639 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active\n"}}
-[debug] [2024-05-26T04:24:29.658Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
-[debug] [2024-05-26T04:24:29.658Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[debug] [2024-05-28T09:27:36.436Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=react-chat-751fb-default-rtdb
+[debug] [2024-05-28T09:27:36.436Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-05-28T09:27:36.643Z] 18:27:36.642 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 95ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"18:27:36.642 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 95ms, init: 0ms\n"}}
+[debug] [2024-05-28T09:27:36.672Z] 18:27:36.671 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active
+ {"metadata":{"emulator":{"name":"database"},"message":"18:27:36.671 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active\n"}}
+[debug] [2024-05-28T09:27:36.698Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2024-05-28T09:27:36.698Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │

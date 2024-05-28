@@ -6,6 +6,12 @@ interface Props {
     data: any;
 }
 
+const qualityColor: { [key: string]: string } = {
+    '영웅 2단': '--purple-700',
+    영웅: '--purple-500',
+    희귀: '--blue-500',
+};
+
 function EquipTable({ data }: Props) {
     const columns: Column[] = [
         {
@@ -21,7 +27,6 @@ function EquipTable({ data }: Props) {
             header: '',
             cell: (props) => {
                 const quality = props.row.getValue('quality');
-                console.log(quality);
                 return (
                     <div
                         style={{
@@ -30,8 +35,7 @@ function EquipTable({ data }: Props) {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            background:
-                                'radial-gradient(circle,var(--purple-700) 0,#000 110%)',
+                            background: `radial-gradient(circle,var(${qualityColor[quality]}) 0,#000 110%)`,
                         }}
                     >
                         <img
