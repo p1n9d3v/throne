@@ -1,7 +1,7 @@
 import Input from '@/components/ui/Input';
-import Select from 'react-select';
+import Select from '@/components/ui/Select';
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 const qualityOptions = [
     { value: '영웅 2단', label: '영웅 2단', color: 'var(--purple-700)' },
@@ -32,26 +32,14 @@ function Equipment() {
                     size="medium"
                     onClear={() => resetField('name')}
                 />
-                <Controller
+
+                <Select
                     control={control}
-                    name="quality"
+                    size="medium"
+                    options={qualityOptions}
                     defaultValue={qualityOptions[0]}
-                    render={({ field: { onChange, value, ref } }) => (
-                        <Select
-                            ref={ref}
-                            // styles={{
-                            // 	contro:
-                            // }}
-                            defaultValue={value}
-                            inputId="quality"
-                            name="quality"
-                            options={qualityOptions}
-                            value={qualityOptions.find(
-                                (option) => option.value === value,
-                            )}
-                            onChange={(option) => onChange(option.value)}
-                        />
-                    )}
+                    name="quality"
+                    inputId="quality"
                 />
             </form>
             {/* Name */}

@@ -1,0 +1,13 @@
+.Select___small {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.4rem;
+}
+
+.Select___medium {
+    padding: 1.2rem 1.6rem;
+    font-size: 1.6rem;
+}
+.Select___large {
+    padding: 1.4rem 1.6rem;
+    font-size: 1.8rem;
+}
