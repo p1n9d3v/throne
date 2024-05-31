@@ -12,11 +12,23 @@ interface Props<T> {
     columns: Column[];
     defaultData: T[];
     headerStyle?: React.CSSProperties;
+    pagination?: {
+        pageIndex: number;
+        pageSize: number;
+    };
+    rowCount?: number;
 }
 
-function Table<T>({ defaultData, columns, headerStyle }: Props<T>) {
+function Table<T>({
+    defaultData,
+    columns,
+    headerStyle,
+    pagination,
+    rowCount,
+}: Props<T>) {
     const data = React.useMemo(() => defaultData, [defaultData]);
     const columnHelper = createColumnHelper<T>();
+    const [_pagination, _setPagination] = React.useState(pagination);
     const table = useReactTable({
         data,
         columns: React.useMemo(
@@ -37,7 +49,15 @@ function Table<T>({ defaultData, columns, headerStyle }: Props<T>) {
             [columns],
         ),
         getCoreRowModel: getCoreRowModel(),
+        manualPagination: true,
+        rowCount,
+        onPaginationChange: _setPagination as any,
+        state: {
+            pagination: _pagination,
+        },
     });
+
+    console.log(table.getState());
 
     return (
         <div className={styles.Table}>
@@ -93,6 +113,28 @@ function Table<T>({ defaultData, columns, headerStyle }: Props<T>) {
                     ))}
                 </tbody>
             </table>
+            {pagination && (
+                <div style={{ display: 'flex', gap: '1.2rem' }}>
+                    <button
+                        type="button"
+                        style={{ fontSize: '3.2rem' }}
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        {' '}
+                        {'<'}{' '}
+                    </button>
+                    <button
+                        type="button"
+                        style={{ fontSize: '3.2rem' }}
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        {' '}
+                        {'>'}{' '}
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

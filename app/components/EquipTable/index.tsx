@@ -4,6 +4,11 @@ import { maxHeaderSize } from 'http';
 
 interface Props {
     data: any;
+    pagination?: {
+        pageIndex: number;
+        pageSize: number;
+    };
+    rowCount?: number;
 }
 
 const qualityColor: { [key: string]: string } = {
@@ -12,7 +17,7 @@ const qualityColor: { [key: string]: string } = {
     희귀: '--blue-500',
 };
 
-function EquipTable({ data }: Props) {
+function EquipTable({ data, pagination, rowCount }: Props) {
     const columns: Column[] = [
         {
             key: 'quality',
@@ -68,7 +73,14 @@ function EquipTable({ data }: Props) {
         },
     ];
 
-    return <Table columns={columns} defaultData={data} />;
+    return (
+        <Table
+            columns={columns}
+            defaultData={data}
+            pagination={pagination}
+            rowCount={rowCount}
+        />
+    );
 }
 
 export default EquipTable;

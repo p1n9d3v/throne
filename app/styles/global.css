@@ -45,8 +45,6 @@ html {
 
 #next {
     background-color: var(--background-color);
-    width: 100dvw;
-    height: 100dvh;
 }
 
 * {

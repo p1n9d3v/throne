@@ -1,7 +1,17 @@
+import React from 'react';
 import Button from '@/components/ui/Button';
 import styles from './index.module.css';
+import Table from '@/components/ui/Table';
+import EquipTable from '@/components/EquipTable';
+import { useQuery } from '@tanstack/react-query';
+import { getAllWeapons } from '@/api/firestore';
 
 export default function Home() {
+    const { data, isLoading } = useQuery({
+        queryKey: ['weapons'],
+        queryFn: getAllWeapons,
+    });
+
     return (
         <div>
             <div className={styles.Home__Thumbnail}>
@@ -13,6 +23,13 @@ export default function Home() {
                     autoPlay
                     muted
                     playsInline
+                />
+            </div>
+            <div style={{ padding: '1rem', boxSizing: 'border-box' }}>
+                <EquipTable
+                    data={data ? Object.values(data) : []}
+                    pagination={{ pageIndex: 0, pageSize: 3 }}
+                    rowCount={10}
                 />
             </div>
         </div>
