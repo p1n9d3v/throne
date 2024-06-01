@@ -2,17 +2,46 @@ import React from 'react';
 import styles from './index.module.css';
 import EquipTable from '@/components/EquipTable';
 import { useQuery } from '@tanstack/react-query';
-import { getAllWeapons } from '@/api/firestore';
+import { getAllWeapons, getWeaponPagination } from '@/api/firestore';
 
 export default function Home() {
+    const [lastVisible, setLastVisible] = React.useState<any>(undefined);
+    const [firstVisible, setFirstVisible] = React.useState<any>(undefined);
+    const [type, setType] = React.useState<'first' | 'prev' | 'next' | 'last'>(
+        'first',
+    );
+    const [nextPagination, setNextPagination] = React.useState({
+        pageIndex: 0,
+        pageSize: 5,
+    });
     const [pagination, setPagination] = React.useState({
         pageIndex: 0,
         pageSize: 5,
     });
-    const { data, isLoading } = useQuery({
-        queryKey: ['weapons'],
-        queryFn: getAllWeapons,
+
+    const { data: weapons } = useQuery({
+        queryKey: ['weapons', pagination],
+        queryFn: async () => {
+            const resp = await getWeaponPagination({
+                type,
+                pageSize: pagination.pageSize,
+                lastVisible,
+                firstVisible,
+            });
+            setLastVisible(resp.lastVisible);
+            setFirstVisible(resp.firstVisible);
+            return resp;
+        },
     });
+
+    React.useEffect(() => {
+        const diff = nextPagination.pageIndex - pagination.pageIndex;
+        if (diff === 1) setType('next');
+        else if (diff === -1) setType('prev');
+        else if (diff < -1) setType('first');
+        else if (diff > 1) setType('last');
+        setPagination(nextPagination);
+    }, [nextPagination]);
 
     return (
         <div>
@@ -29,11 +58,11 @@ export default function Home() {
             </div>
             <div style={{ padding: '1rem', boxSizing: 'border-box' }}>
                 <EquipTable
-                    data={data ? Object.values(data) : []}
-                    rowCount={100}
+                    data={weapons ? weapons.data : []}
+                    rowCount={weapons?.totalCount}
                     pagination={pagination}
-                    onChangePage={(pagination) => {
-                        setPagination(pagination);
+                    onChangePage={(pageState) => {
+                        setNextPagination(pageState);
                     }}
                 />
             </div>

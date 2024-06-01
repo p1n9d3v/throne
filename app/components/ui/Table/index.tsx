@@ -57,8 +57,6 @@ function Table<T>({
         },
     });
 
-    console.log(table.getState());
-
     return (
         <div className={styles.Table}>
             <table cellSpacing={0} cellPadding={0} border={0}>
@@ -118,6 +116,15 @@ function Table<T>({
                     <button
                         type="button"
                         style={{ fontSize: '3.2rem' }}
+                        onClick={() => table.firstPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        {' '}
+                        {'<<'}{' '}
+                    </button>
+                    <button
+                        type="button"
+                        style={{ fontSize: '3.2rem' }}
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
                     >
@@ -132,6 +139,15 @@ function Table<T>({
                     >
                         {' '}
                         {'>'}{' '}
+                    </button>
+                    <button
+                        type="button"
+                        style={{ fontSize: '3.2rem' }}
+                        onClick={() => table.lastPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        {' '}
+                        {'>>'}{' '}
                     </button>
                 </div>
             )}
