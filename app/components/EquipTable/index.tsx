@@ -1,13 +1,11 @@
 import React from 'react';
 import Table from '../ui/Table';
-import { maxHeaderSize } from 'http';
+import { OnChangeFn, PaginationState } from '@tanstack/react-table';
 
 interface Props {
     data: any;
-    pagination?: {
-        pageIndex: number;
-        pageSize: number;
-    };
+    pagination?: PaginationState;
+    onChangePage: OnChangeFn<PaginationState>;
     rowCount?: number;
 }
 
@@ -17,7 +15,7 @@ const qualityColor: { [key: string]: string } = {
     희귀: '--blue-500',
 };
 
-function EquipTable({ data, pagination, rowCount }: Props) {
+function EquipTable({ data, pagination, onChangePage, rowCount }: Props) {
     const columns: Column[] = [
         {
             key: 'quality',
@@ -79,6 +77,7 @@ function EquipTable({ data, pagination, rowCount }: Props) {
             defaultData={data}
             pagination={pagination}
             rowCount={rowCount}
+            onChangePage={onChangePage}
         />
     );
 }

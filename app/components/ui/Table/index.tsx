@@ -1,5 +1,7 @@
 import React from 'react';
 import {
+    OnChangeFn,
+    PaginationState,
     createColumnHelper,
     flexRender,
     getCoreRowModel,
@@ -12,10 +14,8 @@ interface Props<T> {
     columns: Column[];
     defaultData: T[];
     headerStyle?: React.CSSProperties;
-    pagination?: {
-        pageIndex: number;
-        pageSize: number;
-    };
+    pagination?: PaginationState;
+    onChangePage?: OnChangeFn<PaginationState>;
     rowCount?: number;
 }
 
@@ -25,10 +25,10 @@ function Table<T>({
     headerStyle,
     pagination,
     rowCount,
+    onChangePage,
 }: Props<T>) {
     const data = React.useMemo(() => defaultData, [defaultData]);
     const columnHelper = createColumnHelper<T>();
-    const [_pagination, _setPagination] = React.useState(pagination);
     const table = useReactTable({
         data,
         columns: React.useMemo(
@@ -51,9 +51,9 @@ function Table<T>({
         getCoreRowModel: getCoreRowModel(),
         manualPagination: true,
         rowCount,
-        onPaginationChange: _setPagination as any,
+        onPaginationChange: onChangePage,
         state: {
-            pagination: _pagination,
+            pagination,
         },
     });
 

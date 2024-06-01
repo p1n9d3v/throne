@@ -1,12 +1,14 @@
 import React from 'react';
-import Button from '@/components/ui/Button';
 import styles from './index.module.css';
-import Table from '@/components/ui/Table';
 import EquipTable from '@/components/EquipTable';
 import { useQuery } from '@tanstack/react-query';
 import { getAllWeapons } from '@/api/firestore';
 
 export default function Home() {
+    const [pagination, setPagination] = React.useState({
+        pageIndex: 0,
+        pageSize: 5,
+    });
     const { data, isLoading } = useQuery({
         queryKey: ['weapons'],
         queryFn: getAllWeapons,
@@ -28,8 +30,11 @@ export default function Home() {
             <div style={{ padding: '1rem', boxSizing: 'border-box' }}>
                 <EquipTable
                     data={data ? Object.values(data) : []}
-                    pagination={{ pageIndex: 0, pageSize: 3 }}
-                    rowCount={10}
+                    rowCount={100}
+                    pagination={pagination}
+                    onChangePage={(pagination) => {
+                        setPagination(pagination);
+                    }}
                 />
             </div>
         </div>
