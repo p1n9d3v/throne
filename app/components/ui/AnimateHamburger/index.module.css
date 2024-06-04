@@ -1,0 +1,52 @@
+.AnimateHamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburger__hambug {
+    width: 2rem;
+    height: 0.4rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburger__hambug::before,
+.AnimateHamburger__hambug::after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.4rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburger__hambug::before {
+    transform: translateY(-1rem);
+}
+
+.AnimateHamburger__hambug::after {
+    transform: translateY(1rem);
+}
+
+.AnimateHamburger__hambug___active {
+    transform: translateX(-5rem);
+    background: transparent;
+    box-shadow: none;
+}
+
+.AnimateHamburger__hambug___active:before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.AnimateHamburger__hambug___active:after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
