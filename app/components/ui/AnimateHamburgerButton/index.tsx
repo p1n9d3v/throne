@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 interface Props extends React.ComponentProps<'button'> {}
 
-function AnimateHamburger({ onClick }: Props) {
+function AnimateHamburgerButton({ onClick }: Props) {
     const [isActive, setIsActive] = React.useState(false);
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -15,18 +15,18 @@ function AnimateHamburger({ onClick }: Props) {
     return (
         <button
             type="button"
-            className={styles.AnimateHamburger}
+            className={styles.AnimateHamburgerButton}
             onClick={handleClick}
-            onMouseEnter={() => setIsActive(true)}
-            onMouseLeave={() => setIsActive(false)}
+            // onMouseEnter={() => setIsActive(true)}
+            // onMouseLeave={() => setIsActive(false)} set is mobile
         >
             <div
-                className={cx(styles.AnimateHamburger__hambug, {
-                    [styles.AnimateHamburger__hambug___active]: isActive,
+                className={cx(styles.AnimateHamburgerButton__hambug, {
+                    [styles.AnimateHamburgerButton__hambug___active]: isActive,
                 })}
             ></div>
         </button>
     );
 }
 
-export default AnimateHamburger;
+export default AnimateHamburgerButton;

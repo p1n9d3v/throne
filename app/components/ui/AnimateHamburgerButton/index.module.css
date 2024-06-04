@@ -1,4 +1,4 @@
-.AnimateHamburger {
+.AnimateHamburgerButton {
     position: relative;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
     transition: all 0.5s ease-in-out;
 }
 
-.AnimateHamburger__hambug {
+.AnimateHamburgerButton__hambug {
     width: 2rem;
     height: 0.4rem;
     background: #fff;
@@ -18,8 +18,8 @@
     transition: all 0.5s ease-in-out;
 }
 
-.AnimateHamburger__hambug::before,
-.AnimateHamburger__hambug::after {
+.AnimateHamburgerButton__hambug::before,
+.AnimateHamburgerButton__hambug::after {
     content: '';
     position: absolute;
     width: 2.5rem;
@@ -30,23 +30,25 @@
     transition: all 0.5s ease-in-out;
 }
 
-.AnimateHamburger__hambug::before {
+.AnimateHamburgerButton__hambug::before {
     transform: translateY(-1rem);
 }
 
-.AnimateHamburger__hambug::after {
+.AnimateHamburgerButton__hambug::after {
     transform: translateY(1rem);
 }
 
-.AnimateHamburger__hambug___active {
+.AnimateHamburgerButton__hambug___active {
     transform: translateX(-5rem);
     background: transparent;
     box-shadow: none;
 }
 
-.AnimateHamburger__hambug___active:before {
+.AnimateHamburgerButton__hambug___active:before {
     transform: rotate(45deg) translate(35px, -35px);
+    background: var(--primary-color);
 }
-.AnimateHamburger__hambug___active:after {
+.AnimateHamburgerButton__hambug___active:after {
     transform: rotate(-45deg) translate(35px, 35px);
+    background: var(--primary-color);
 }

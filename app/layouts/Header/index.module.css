@@ -12,7 +12,7 @@
     height: 6.3rem;
 }
 
-.Header__Title {
+.Header__title {
     text-align: center;
     color: #fff;
     font-size: 2.4rem;
@@ -20,15 +20,21 @@
     text-transform: capitalize;
 }
 
-.Header__Sign {
+.Header__sign {
     color: #fff;
     font-size: 1.6rem;
     text-transform: uppercase;
 }
 
-.Header__Sign button {
+.Header__sign button {
     transition: color 0.3s ease-in-out;
 }
-.Header__Sign button:hover {
+.Header__sign button:hover {
     color: var(--primary-color);
+}
+
+.Header__col:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
 }
