@@ -5,7 +5,7 @@ import { OnChangeFn, PaginationState } from '@tanstack/react-table';
 interface Props {
     data: any;
     pagination?: PaginationState;
-    onChangePage: OnChangeFn<PaginationState>;
+    onChangePage?: OnChangeFn<PaginationState>;
     rowCount?: number;
 }
 
@@ -74,7 +74,7 @@ function EquipTable({ data, pagination, onChangePage, rowCount }: Props) {
     return (
         <Table
             columns={columns}
-            defaultData={data}
+            defaultData={data ?? []}
             pagination={pagination}
             rowCount={rowCount}
             onChangePage={onChangePage}

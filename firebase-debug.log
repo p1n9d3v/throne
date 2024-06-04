@@ -1,38 +1,41 @@
-[debug] [2024-05-31T09:00:55.923Z] ----------------------------------------------------------------------
-[debug] [2024-05-31T09:00:55.925Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase emulators:start --import=./firebase_mock/ --export-on-exit
-[debug] [2024-05-31T09:00:55.925Z] CLI Version:   13.0.3
-[debug] [2024-05-31T09:00:55.925Z] Platform:      darwin
-[debug] [2024-05-31T09:00:55.925Z] Node Version:  v21.6.1
-[debug] [2024-05-31T09:00:55.925Z] Time:          Fri May 31 2024 18:00:55 GMT+0900 (Korean Standard Time)
-[debug] [2024-05-31T09:00:55.925Z] ----------------------------------------------------------------------
+[debug] [2024-06-04T06:19:19.535Z] ----------------------------------------------------------------------
+[debug] [2024-06-04T06:19:19.538Z] Command:       /opt/homebrew/Cellar/node/21.6.1/bin/node /opt/homebrew/bin/firebase emulators:start --import=./firebase_mock/ --export-on-exit
+[debug] [2024-06-04T06:19:19.538Z] CLI Version:   13.0.3
+[debug] [2024-06-04T06:19:19.538Z] Platform:      darwin
+[debug] [2024-06-04T06:19:19.538Z] Node Version:  v21.6.1
+[debug] [2024-06-04T06:19:19.538Z] Time:          Tue Jun 04 2024 15:19:19 GMT+0900 (Korean Standard Time)
+[debug] [2024-06-04T06:19:19.538Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-05-31T09:00:55.974Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-05-31T09:00:55.974Z] > authorizing via signed-in user (p1n9m4i1@gmail.com)
-[debug] [2024-05-31T09:00:56.029Z] openjdk version "21.0.2" 2024-01-16 LTS
-OpenJDK Runtime Environment Temurin-21.0.2+13 (build 21.0.2+13-LTS)
+[debug] [2024-06-04T06:19:19.540Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-06-04T06:19:19.593Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-04T06:19:19.593Z] > authorizing via signed-in user (p1n9m4i1@gmail.com)
+[debug] [2024-06-04T06:19:19.729Z] openjdk version "21.0.2" 2024-01-16 LTS
 
-[debug] [2024-05-31T09:00:56.029Z] OpenJDK 64-Bit Server VM Temurin-21.0.2+13 (build 21.0.2+13-LTS, mixed mode)
+[debug] [2024-06-04T06:19:19.729Z] OpenJDK Runtime Environment Temurin-21.0.2+13 (build 21.0.2+13-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.2+13 (build 21.0.2+13-LTS, mixed mode)
 
-[debug] [2024-05-31T09:00:56.032Z] Parsed Java major version: 21
+[debug] [2024-06-04T06:19:19.732Z] Parsed Java major version: 21
 [info] i  emulators: Starting emulators: auth, firestore, database, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, firestore, database, storage"}}
-[debug] [2024-05-31T09:00:56.587Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2024-05-31T09:00:56.587Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2024-05-31T09:00:56.591Z] [hub] writing locator at /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/hub-react-chat-751fb.json
+[debug] [2024-06-04T06:19:20.305Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.305Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.305Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.305Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.306Z] [database] Database Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.306Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-04T06:19:20.306Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"database":[{"address":"127.0.0.1","family":"IPv4","port":9000}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-06-04T06:19:20.310Z] [hub] writing locator at /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/hub-react-chat-751fb.json
 [info] i  firestore: Importing data from /Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from /Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata"}}
-[debug] [2024-05-31T09:00:56.598Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-31T09:00:56.598Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2024-05-31T09:00:56.598Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","react-chat-751fb","--seed_from_export","/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata","--rules","/Users/p1n9/Developments/throne/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"react-chat-751fb\",\"--seed_from_export\",\"/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata\",\"--rules\",\"/Users/p1n9/Developments/throne/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2024-06-04T06:19:20.318Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-04T06:19:20.318Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-06-04T06:19:20.318Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","react-chat-751fb","--seed_from_export","/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata","--rules","/Users/p1n9/Developments/throne/firestore.rules","--single_project_mode",true],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"react-chat-751fb\",\"--seed_from_export\",\"/Users/p1n9/Developments/throne/firebase_mock/firestore_export/firestore_export.overall_export_metadata\",\"--rules\",\"/Users/p1n9/Developments/throne/firestore.rules\",\"--single_project_mode\",true],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2024-05-31T09:00:57.168Z] May 31, 2024 6:00:57 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2024-06-04T06:19:20.525Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-06-04T06:19:20.525Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-06-04T06:19:21.258Z] Jun 04, 2024 3:19:21 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:00:57 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
-[debug] [2024-05-31T09:00:57.182Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2024-05-31T09:00:57.182Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jun 04, 2024 3:19:21 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2024-06-04T06:19:21.280Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-06-04T06:19:21.280Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -41,51 +44,44 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
 [info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2024-05-31T09:00:57.359Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb [none]
-[debug] [2024-05-31T09:00:57.819Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb 200
-[debug] [2024-05-31T09:00:57.820Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb {"projectId":"react-chat-751fb","projectNumber":"614586919878","displayName":"next-throne","name":"projects/react-chat-751fb","resources":{"hostingSite":"react-chat-751fb","realtimeDatabaseInstance":"react-chat-751fb-default-rtdb","storageBucket":"react-chat-751fb.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_7d53dcab-adbe-45dc-b289-cb56dc54ea33"}
-[debug] [2024-05-31T09:00:57.820Z] database rules config:  [{"instance":"react-chat-751fb-default-rtdb","rules":"/Users/p1n9/Developments/throne/database.rules.json"}]
-[debug] [2024-05-31T09:00:57.822Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
-[debug] [2024-05-31T09:00:57.822Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-31T09:00:57.822Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
-[debug] [2024-05-31T09:00:57.822Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2024-06-04T06:19:21.331Z] > refreshing access token with scopes: []
+[debug] [2024-06-04T06:19:21.331Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-04T06:19:21.331Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T06:19:21.549Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-04T06:19:21.550Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-04T06:19:21.568Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb [none]
+[debug] [2024-06-04T06:19:22.123Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb 200
+[debug] [2024-06-04T06:19:22.124Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-chat-751fb {"projectId":"react-chat-751fb","projectNumber":"614586919878","displayName":"next-throne","name":"projects/react-chat-751fb","resources":{"hostingSite":"react-chat-751fb","realtimeDatabaseInstance":"react-chat-751fb-default-rtdb","storageBucket":"react-chat-751fb.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_7d53dcab-adbe-45dc-b289-cb56dc54ea33"}
+[debug] [2024-06-04T06:19:22.124Z] database rules config:  [{"instance":"react-chat-751fb-default-rtdb","rules":"/Users/p1n9/Developments/throne/database.rules.json"}]
+[debug] [2024-06-04T06:19:22.125Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2024-06-04T06:19:22.125Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-04T06:19:22.125Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2024-06-04T06:19:22.125Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar","--host","127.0.0.1","--port",9000,"--single_project_mode","Warning"],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/p1n9/.cache/firebase/emulators/firebase-database-emulator-v4.11.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",9000,\"--single_project_mode\",\"Warning\"],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
-[debug] [2024-05-31T09:00:58.456Z] 18:00:58.455 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
- {"metadata":{"emulator":{"name":"database"},"message":"18:00:58.455 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
-[debug] [2024-05-31T09:00:58.535Z] 18:00:58.535 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
- {"metadata":{"emulator":{"name":"database"},"message":"18:00:58.535 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
+[debug] [2024-06-04T06:19:23.127Z] 15:19:23.126 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"15:19:23.126 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2024-06-04T06:19:23.241Z] 15:19:23.240 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"15:19:23.240 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000\n"}}
 [info] i  auth: Importing config from /Users/p1n9/Developments/throne/firebase_mock/auth_export/config.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing config from /Users/p1n9/Developments/throne/firebase_mock/auth_export/config.json"}}
 [info] i  auth: Importing accounts from /Users/p1n9/Developments/throne/firebase_mock/auth_export/accounts.json {"metadata":{"emulator":{"name":"auth"},"message":"Importing accounts from /Users/p1n9/Developments/throne/firebase_mock/auth_export/accounts.json"}}
-[debug] [2024-05-31T09:01:01.486Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2024-05-31T09:01:01.871Z] May 31, 2024 6:01:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:01.886Z] May 31, 2024 6:01:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:01.951Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:02.012Z] Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs"}}
-[debug] [2024-05-31T09:01:02.017Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2024-05-31T09:01:02.017Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2024-05-31T09:01:02.017Z] Starting Emulator UI with command {"binary":"node","args":["/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[debug] [2024-06-04T06:19:27.077Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-04T06:19:27.518Z] Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/1n/m0hsgkgs14qbyq685rgdl4240000gn/T/firebase/storage/blobs"}}
+[debug] [2024-06-04T06:19:27.522Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-04T06:19:27.523Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-04T06:19:27.523Z] Starting Emulator UI with command {"binary":"node","args":["/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/p1n9/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2024-05-31T09:01:02.116Z] Web / API server started at 127.0.0.1:4000
+[debug] [2024-06-04T06:19:27.596Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2024-05-31T09:01:02.117Z] Web / API server started at ::1:4000
+[debug] [2024-06-04T06:19:27.597Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
-[debug] [2024-05-31T09:01:02.264Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:02.273Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=react-chat-751fb-default-rtdb
-[debug] [2024-05-31T09:01:02.273Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
-[debug] [2024-05-31T09:01:02.304Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:02.489Z] 18:01:02.489 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 101ms, init: 0ms
- {"metadata":{"emulator":{"name":"database"},"message":"18:01:02.489 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 101ms, init: 0ms\n"}}
-[debug] [2024-05-31T09:01:02.524Z] 18:01:02.524 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active
- {"metadata":{"emulator":{"name":"database"},"message":"18:01:02.524 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active\n"}}
-[debug] [2024-05-31T09:01:02.551Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
-[debug] [2024-05-31T09:01:02.551Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
+[debug] [2024-06-04T06:19:27.778Z] >>> [apiv2][query] PUT http://127.0.0.1:9000/.settings/rules.json ns=react-chat-751fb-default-rtdb
+[debug] [2024-06-04T06:19:27.779Z] >>> [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-06-04T06:19:27.971Z] 15:19:27.971 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 68ms, init: 0ms
+ {"metadata":{"emulator":{"name":"database"},"message":"15:19:27.971 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - react-chat-751fb-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 68ms, init: 0ms\n"}}
+[debug] [2024-06-04T06:19:28.001Z] 15:19:28.001 [NamespaceSystem-blocking-namespace-operation-dispatcher-8] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active
+ {"metadata":{"emulator":{"name":"database"},"message":"15:19:28.001 [NamespaceSystem-blocking-namespace-operation-dispatcher-8] INFO com.firebase.core.namespace.StateManager - Namespace react-chat-751fb-default-rtdb status Active to Active\n"}}
+[debug] [2024-06-04T06:19:28.013Z] <<< [apiv2][status] PUT http://127.0.0.1:9000/.settings/rules.json 200
+[debug] [2024-06-04T06:19:28.013Z] <<< [apiv2][body] PUT http://127.0.0.1:9000/.settings/rules.json {"status":"ok"}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -108,266 +104,3 @@ INFO: Detected HTTP/2 connection.
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2024-05-31T09:01:02.666Z] May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:02.673Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:02.933Z] May 31, 2024 6:01:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:01:02.938Z] May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:02.938Z] May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nMay 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:02.954Z] May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:03.009Z] May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:03.127Z] May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:03.138Z] May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:07.702Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:07.704Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:07.714Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:09.990Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:10.044Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:10.954Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:10.962Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:11.967Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:11.985Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:13.388Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:13.402Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:14.558Z] May 31, 2024 6:01:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:01:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:01:14.562Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:19.536Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:19.537Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:19.546Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:01:19.907Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:02:03.162Z] May 31, 2024 6:02:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:02:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:03:03.178Z] May 31, 2024 6:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:03.199Z] May 31, 2024 6:04:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:04:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:17.644Z] May 31, 2024 6:04:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:04:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:18.073Z] May 31, 2024 6:04:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:04:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:18.077Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:26.360Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:27.654Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:27.654Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:27.674Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:28.571Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:28.581Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:30.185Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:30.186Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:31.003Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:31.023Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:31.716Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:31.730Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:33.076Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:35.736Z] May 31, 2024 6:04:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:04:35 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:35.741Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:40.483Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:40.485Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:41.972Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:41.983Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:51.029Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:54.437Z] May 31, 2024 6:04:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:04:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:04:54.441Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:59.418Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:59.420Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:04:59.433Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:05:01.503Z] May 31, 2024 6:05:01 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:01 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:01.602Z] May 31, 2024 6:05:01 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:01 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:01.621Z] May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:01.652Z] May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:01.670Z] May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.613Z] May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:02.687Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.691Z] May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:02.720Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.748Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.852Z] May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:02.894Z] May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:02.905Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.922Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:02.953Z] May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:02 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.041Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:03.103Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:03.104Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.134Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.155Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.273Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:03.319Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:03.338Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.359Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.383Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.468Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2024-05-31T09:05:03.517Z] May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2024-05-31T09:05:03.536Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.555Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.582Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:03.846Z] May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:08.011Z] May 31, 2024 6:05:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:05:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:05:08.015Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:05:13.027Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:05:13.027Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:05:13.035Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:06:03.865Z] May 31, 2024 6:06:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:06:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:06:33.080Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:06:51.052Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:06:59.423Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:07:13.032Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:07:19.520Z] May 31, 2024 6:07:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 6:07:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2024-05-31T09:08:33.085Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:08:51.055Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:08:59.428Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:09:13.034Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T09:10:33.088Z] Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '"singleProjectMode": false' property in the firebase.json emulators config.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Multiple projectIds are not recommended in single project mode. Requested project ID example-project, but the emulator is configured for react-chat-751fb. To opt-out of single project mode add/set the '\"singleProjectMode\": false' property in the firebase.json emulators config.\n"}}
-[debug] [2024-05-31T12:54:33.808Z] May 31, 2024 9:54:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"May 31, 2024 9:54:33 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}

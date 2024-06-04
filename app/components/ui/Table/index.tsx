@@ -9,6 +9,12 @@ import {
 } from '@tanstack/react-table';
 import styles from './index.module.css';
 import cx from 'classnames';
+import {
+    HiOutlineChevronDoubleRight,
+    HiOutlineChevronDoubleLeft,
+    HiOutlineChevronLeft,
+    HiOutlineChevronRight,
+} from 'react-icons/hi';
 
 interface Props<T> {
     columns: Column[];
@@ -58,96 +64,100 @@ function Table<T>({
     });
 
     return (
-        <div className={styles.Table}>
-            <table cellSpacing={0} cellPadding={0} border={0}>
-                <thead className={cx(styles.Table__header, headerStyle)}>
-                    {table.getHeaderGroups().map((headerGroup) => (
-                        <tr key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => {
-                                return (
-                                    <th
-                                        key={header.id}
-                                        colSpan={header.colSpan}
+        <div>
+            <div className={styles.Table}>
+                <table cellSpacing={0} cellPadding={0} border={0}>
+                    <thead className={cx(styles.Table__header, headerStyle)}>
+                        {table.getHeaderGroups().map((headerGroup) => (
+                            <tr key={headerGroup.id}>
+                                {headerGroup.headers.map((header) => {
+                                    return (
+                                        <th
+                                            key={header.id}
+                                            colSpan={header.colSpan}
+                                            style={{
+                                                width:
+                                                    header.getSize() !== 150 // default size
+                                                        ? `${header.getSize()}px`
+                                                        : 'auto',
+                                            }}
+                                        >
+                                            {header.isPlaceholder
+                                                ? null
+                                                : flexRender(
+                                                      header.column.columnDef
+                                                          .header,
+                                                      header.getContext(),
+                                                  )}
+                                        </th>
+                                    );
+                                })}
+                            </tr>
+                        ))}
+                    </thead>
+                    <tbody className={styles.Table__body}>
+                        {table.getRowModel().rows.map((row) => (
+                            <tr key={row.id}>
+                                {row.getVisibleCells().map((cell) => (
+                                    <td
+                                        key={cell.id}
                                         style={{
-                                            width:
-                                                header.getSize() !== 150 // default size
-                                                    ? `${header.getSize()}px`
-                                                    : 'auto',
+                                            textAlign:
+                                                cell.column.columnDef.meta!
+                                                    .align,
+                                            verticalAlign:
+                                                cell.column.columnDef.meta!
+                                                    .valign,
                                         }}
                                     >
-                                        {header.isPlaceholder
-                                            ? null
-                                            : flexRender(
-                                                  header.column.columnDef
-                                                      .header,
-                                                  header.getContext(),
-                                              )}
-                                    </th>
-                                );
-                            })}
-                        </tr>
-                    ))}
-                </thead>
-                <tbody className={styles.Table__body}>
-                    {table.getRowModel().rows.map((row) => (
-                        <tr key={row.id}>
-                            {row.getVisibleCells().map((cell) => (
-                                <td
-                                    key={cell.id}
-                                    style={{
-                                        textAlign:
-                                            cell.column.columnDef.meta!.align,
-                                        verticalAlign:
-                                            cell.column.columnDef.meta!.valign,
-                                    }}
-                                >
-                                    {flexRender(
-                                        cell.column.columnDef.cell,
-                                        cell.getContext(),
-                                    )}
-                                </td>
-                            ))}
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-            {pagination && (
-                <div style={{ display: 'flex', gap: '1.2rem' }}>
+                                        {flexRender(
+                                            cell.column.columnDef.cell,
+                                            cell.getContext(),
+                                        )}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+
+            {pagination && rowCount && (
+                <div className={styles.Pagination}>
                     <button
                         type="button"
-                        style={{ fontSize: '3.2rem' }}
+                        className={styles.Pagination__icon}
                         onClick={() => table.firstPage()}
                         disabled={!table.getCanPreviousPage()}
                     >
-                        {' '}
-                        {'<<'}{' '}
+                        <HiOutlineChevronDoubleLeft />
                     </button>
                     <button
                         type="button"
-                        style={{ fontSize: '3.2rem' }}
+                        className={styles.Pagination__icon}
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
                     >
-                        {' '}
-                        {'<'}{' '}
+                        <HiOutlineChevronLeft />
                     </button>
+                    <div className={styles.Pagination__pageInfo}>
+                        {`${pagination.pageIndex + 1} / ${Math.ceil(rowCount / pagination.pageSize)}`}
+                    </div>
                     <button
                         type="button"
-                        style={{ fontSize: '3.2rem' }}
+                        className={styles.Pagination__icon}
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
                     >
-                        {' '}
-                        {'>'}{' '}
+                        <HiOutlineChevronRight />
                     </button>
                     <button
                         type="button"
-                        style={{ fontSize: '3.2rem' }}
+                        className={styles.Pagination__icon}
                         onClick={() => table.lastPage()}
                         disabled={!table.getCanNextPage()}
                     >
-                        {' '}
-                        {'>>'}{' '}
+                        <HiOutlineChevronDoubleRight />
                     </button>
                 </div>
             )}

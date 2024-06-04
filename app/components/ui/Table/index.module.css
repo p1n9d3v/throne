@@ -30,3 +30,17 @@
     font-size: 1.4rem;
     border: 1px solid #fff;
 }
+
+.Pagination {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: end;
+    margin-top: 1.2rem;
+}
+
+.Pagination__icon {
+    font-size: 2.4rem;
+}
+.Pagination__pageInfo {
+    font-size: 2rem;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import Table from '.';
 
 const meta = {
@@ -23,7 +22,6 @@ export const Default: Story = {
         React.useEffect(() => {
             fetch('/mock/weapon.json').then(async (data) => {
                 const json = await data.json();
-                console.log(json);
                 setData(json);
             });
         }, []);
@@ -44,10 +42,16 @@ export const Default: Story = {
                             {
                                 key: 'damage',
                                 header: 'Damage',
-                                cell: (data) => `${data.min} ~ ${data.max}`,
+                                cell: (data) =>
+                                    `${data.getValue().min} ~ ${data.getValue().max}`,
                             },
                         ],
                         defaultData: data,
+                        pagination: {
+                            pageIndex: 0,
+                            pageSize: 5,
+                        },
+                        rowCount: 5,
                     }}
                 />
             </div>

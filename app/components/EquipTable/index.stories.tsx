@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import EquipTable from '.';
+import { fn } from '@storybook/test';
 
 const meta = {
     title: 'Components/EquipTable',
@@ -21,7 +22,6 @@ export const Default: Story = {
         React.useEffect(() => {
             fetch('/mock/weapon.json').then(async (data) => {
                 const json = await data.json();
-                console.log(json);
                 setData(json);
             });
         }, []);
@@ -31,6 +31,12 @@ export const Default: Story = {
                 <Story
                     args={{
                         data,
+                        pagination: {
+                            pageIndex: 0,
+                            pageSize: 5,
+                        },
+                        rowCount: 5,
+                        onChangePage: fn(),
                     }}
                 />
             </div>

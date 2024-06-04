@@ -1,7 +1,7 @@
 import { queryPagination } from '@/api/firestore';
 import { Updater, PaginationState } from '@tanstack/react-table';
 import React from 'react';
-import {useQuery} from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query';
 
 interface Props {
     paths: string[];
@@ -9,7 +9,11 @@ interface Props {
     orderType: 'asc' | 'desc';
 }
 
-function usePagination({ paths.orderByField,orderType }: Props) {
+function usePagination({ paths, orderByField, orderType }: Props): {
+    data: any;
+    pagination: PaginationState;
+    onChangePage: (pageState: Updater<PaginationState>) => void;
+} {
     const [lastVisible, setLastVisible] = React.useState<any>(undefined);
     const [firstVisible, setFirstVisible] = React.useState<any>(undefined);
     const [type, setType] = React.useState<'first' | 'prev' | 'next' | 'last'>(
@@ -24,9 +28,7 @@ function usePagination({ paths.orderByField,orderType }: Props) {
         pageSize: 5,
     });
 
-
-
-    const query = useQuery({
+    const { data } = useQuery({
         queryKey: ['weapons', pagination],
         queryFn: async () => {
             const resp = await queryPagination({
@@ -34,9 +36,9 @@ function usePagination({ paths.orderByField,orderType }: Props) {
                 pageSize: pagination.pageSize,
                 lastVisible,
                 firstVisible,
-				paths,
-				orderByField,
-				orderType
+                paths,
+                orderByField,
+                orderType,
             });
             setLastVisible(resp.lastVisible);
             setFirstVisible(resp.firstVisible);
@@ -44,10 +46,9 @@ function usePagination({ paths.orderByField,orderType }: Props) {
         },
     });
 
-
-	const onChangePage = (pageState:Updater<PaginationState>) => {
-		setNextPagination(pageState)
-	}
+    const onChangePage = (pageState: Updater<PaginationState>) => {
+        setNextPagination(pageState);
+    };
 
     React.useEffect(() => {
         const diff = nextPagination.pageIndex - pagination.pageIndex;
@@ -58,11 +59,11 @@ function usePagination({ paths.orderByField,orderType }: Props) {
         setPagination(nextPagination);
     }, [nextPagination]);
 
-	return {
-		pagination,
-		onChangePage,
-		query
-	}
+    return {
+        pagination,
+        onChangePage,
+        data: data ?? [],
+    };
 }
 
-export default  usePagination
+export default usePagination;
