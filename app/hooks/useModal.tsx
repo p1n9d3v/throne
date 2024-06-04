@@ -2,14 +2,18 @@ import { modalAtom, modalSelector } from '@/context/atom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 
 function useModal() {
-    const { isOpen, view } = useRecoilValue(modalSelector);
+    const { isOpen, view, direction } = useRecoilValue(modalSelector);
     const setModalState = useSetRecoilState(modalAtom);
 
-    const openModal = (view: string) => {
+    const openModal = (
+        view: string,
+        direction: 'left' | 'right' | 'center',
+    ) => {
         setModalState((prev) => ({
             ...prev,
             isOpen: true,
             view,
+            direction,
         }));
     };
 
@@ -18,9 +22,11 @@ function useModal() {
             ...prev,
             isOpen: false,
             view: '',
+            direction: 'center',
         }));
     };
-    return { isOpen, view, openModal, closeModal };
+
+    return { isOpen, view, direction, openModal, closeModal };
 }
 
 export default useModal;

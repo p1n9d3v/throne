@@ -17,7 +17,7 @@ function Sign() {
     const [tab, setTab] = React.useState(0);
 
     return (
-        <div>
+        <div className={styles.Sign}>
             <h1 className={styles.Sign__title}>
                 {tab ? '회원가입' : '로그인'}
             </h1>

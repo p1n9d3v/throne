@@ -28,6 +28,7 @@ const ModalContent = () => (
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            background: '#ff0000',
         }}
     >
         Modal
@@ -60,11 +61,7 @@ export const LeftModal: Story = {
     args: {
         isOpen: true,
         direction: 'left',
-        style: {
-            width: '200px',
-            height: '100dvh',
-        },
-        children: <div>123</div>,
+        children: <ModalContent />,
         onClose: fn(),
     },
 };
@@ -73,11 +70,7 @@ export const RightModal: Story = {
     args: {
         isOpen: true,
         direction: 'right',
-        style: {
-            width: '200px',
-            height: '100dvh',
-        },
-        children: <div>123</div>,
+        children: <ModalContent />,
         onClose: fn(),
     },
 };
@@ -96,6 +89,7 @@ export const PlayCloseModal: Story = {
                     isOpen={open}
                     onClose={handleCloseModal}
                     direction="center"
+                    showCloseButton
                 >
                     <ModalContent />
                 </Modal>

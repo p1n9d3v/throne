@@ -4,18 +4,18 @@ import React from 'react';
 import styles from './index.module.css';
 import useAuth from '@/hooks/useAuth';
 import useModal from '@/hooks/useModal';
-import AnimateHamburgerButton from '@/components/ui/AnimateHamburgerButton';
+import AnimateHamburgerButton from '@/components/Modal/AnimateHamburgerButton';
 
 interface Props {}
 
 function Header() {
-    const { openModal } = useModal();
+    const { isOpen, openModal } = useModal();
     const { user, signout } = useAuth();
 
     return (
         <header className={styles.Header}>
             <div className={styles.Header__col}>
-                <AnimateHamburgerButton onClick={() => {}} />
+                <AnimateHamburgerButton />
                 <div className={styles.Header__title}>Trone And Gear</div>
             </div>
             <div className={styles.Header__col}>
@@ -30,7 +30,9 @@ function Header() {
                             logout
                         </button>
                     ) : (
-                        <button onClick={() => openModal('sign')}>login</button>
+                        <button onClick={() => openModal('sign', 'center')}>
+                            login
+                        </button>
                     )}
                 </div>
             </div>

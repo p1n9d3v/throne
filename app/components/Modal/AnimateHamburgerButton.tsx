@@ -1,15 +1,13 @@
 import React from 'react';
 import styles from './index.module.css';
 import cx from 'classnames';
+import useModal from '@/hooks/useModal';
 
-interface Props extends React.ComponentProps<'button'> {}
+function AnimateHamburgerButton() {
+    const { isOpen, openModal, closeModal } = useModal();
 
-function AnimateHamburgerButton({ onClick }: Props) {
-    const [isActive, setIsActive] = React.useState(false);
-
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setIsActive(!isActive);
-        onClick && onClick(e);
+    const handleClick = () => {
+        isOpen ? closeModal() : openModal('sidebar', 'left');
     };
 
     return (
@@ -22,7 +20,7 @@ function AnimateHamburgerButton({ onClick }: Props) {
         >
             <div
                 className={cx(styles.AnimateHamburgerButton__hambug, {
-                    [styles.AnimateHamburgerButton__hambug___active]: isActive,
+                    [styles.AnimateHamburgerButton__hambug___active]: isOpen,
                 })}
             ></div>
         </button>

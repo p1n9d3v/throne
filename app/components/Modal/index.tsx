@@ -8,7 +8,7 @@ interface Props extends React.PropsWithChildren {
     onClose: () => void;
     style?: React.CSSProperties;
     showCloseButton?: boolean;
-    direction: 'left' | 'right' | 'center';
+    direction?: 'left' | 'right' | 'center';
 }
 
 function Modal({
@@ -27,7 +27,7 @@ function Modal({
         setTimeout(() => {
             onClose && onClose();
             setIsAnimateEnd(false);
-        }, 200);
+        }, 300);
     }, [onClose]);
 
     React.useEffect(() => {

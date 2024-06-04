@@ -1,24 +1,18 @@
 import React from 'react';
-import Modal from '../Modal';
+import useModal from '@/hooks/useModal';
+import styles from './index.module.css';
+import cx from 'classnames';
 
-interface Props {
-    isOpen: boolean;
-    onClose: () => void;
-}
-function Sidebar({ isOpen, onClose }: Props) {
+function Sidebar() {
+    const { isOpen } = useModal();
+    console.log(isOpen);
     return (
-        <Modal
-            direction="left"
-            isOpen={isOpen}
-            onClose={onClose}
-            style={{
-                width: '200px',
-                height: '100dvh',
-                padding: '1rem',
-            }}
-        >
-            <div>123</div>
-        </Modal>
+        <div
+            className={cx(styles.Sidebar, {
+                [styles.Sidebar___open]: isOpen,
+                [styles.Sidebar___close]: !isOpen,
+            })}
+        ></div>
     );
 }
 

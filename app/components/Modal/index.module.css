@@ -13,9 +13,6 @@
 
 .Modal__content {
     position: relative;
-    background-color: var(--gray-900);
-    border-radius: 0.8rem;
-    padding: 3.6rem 2.4rem 1.2rem 2.4rem;
     width: fit-content;
 }
 
@@ -33,11 +30,11 @@
 }
 
 .Modal___fadeIn {
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .Modal___fadeOut {
-    animation: fadeOut 0.3s ease-in-out;
+    animation: fadeOut 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -55,4 +52,61 @@
     to {
         opacity: 0;
     }
+}
+
+/* animate modal button */
+
+.AnimateHamburgerButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburgerButton__hambug {
+    width: 2rem;
+    height: 0.4rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburgerButton__hambug::before,
+.AnimateHamburgerButton__hambug::after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.4rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.AnimateHamburgerButton__hambug::before {
+    transform: translateY(-1rem);
+}
+
+.AnimateHamburgerButton__hambug::after {
+    transform: translateY(1rem);
+}
+
+.AnimateHamburgerButton__hambug___active {
+    transform: translateX(-5rem);
+    background: transparent;
+    box-shadow: none;
+}
+
+.AnimateHamburgerButton__hambug___active:before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background: var(--primary-color);
+}
+.AnimateHamburgerButton__hambug___active:after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background: var(--primary-color);
 }
