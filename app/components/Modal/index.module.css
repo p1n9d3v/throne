@@ -19,6 +19,13 @@
     width: fit-content;
 }
 
+.Modal___left {
+    justify-content: start;
+}
+.Modal___right {
+    justify-content: end;
+}
+
 .Modal__close {
     position: absolute;
     top: 0.4rem;

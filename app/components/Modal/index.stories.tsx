@@ -10,6 +10,9 @@ const meta = {
     parameters: {
         layout: 'centered',
     },
+    args: {
+        direction: 'center',
+    },
 } satisfies Meta<typeof Modal>;
 
 export default meta;
@@ -40,11 +43,39 @@ export const Default: Story = {
         return (
             <>
                 <button onClick={handleToggleOpen}>Open Modal</button>
-                <Modal isOpen={open} onClose={handleToggleOpen}>
+                <Modal
+                    isOpen={open}
+                    onClose={handleToggleOpen}
+                    direction="center"
+                >
                     <ModalContent />
                 </Modal>
             </>
         );
+    },
+};
+
+export const LeftModal: Story = {
+    args: {
+        isOpen: true,
+        direction: 'left',
+        style: {
+            width: '200px',
+            height: '100dvh',
+        },
+        children: <div>123</div>,
+    },
+};
+
+export const RightModal: Story = {
+    args: {
+        isOpen: true,
+        direction: 'right',
+        style: {
+            width: '200px',
+            height: '100dvh',
+        },
+        children: <div>123</div>,
     },
 };
 
@@ -58,7 +89,11 @@ export const PlayCloseModal: Story = {
         const handleCloseModal = () => setOpen(!open);
         return (
             <>
-                <Modal isOpen={open} onClose={handleCloseModal}>
+                <Modal
+                    isOpen={open}
+                    onClose={handleCloseModal}
+                    direction="center"
+                >
                     <ModalContent />
                 </Modal>
             </>

@@ -5,18 +5,19 @@ import cx from 'classnames';
 
 interface Props extends React.PropsWithChildren {
     isOpen: boolean;
-    onClose: () => void;
+    onClose?: () => void;
     style?: React.CSSProperties;
+    direction: 'left' | 'right' | 'center';
 }
 
-function Modal({ isOpen, onClose, style, children }: Props) {
+function Modal({ isOpen, direction, onClose, style, children }: Props) {
     const [isAnimateEnd, setIsAnimateEnd] = React.useState(false);
     const ref = React.useRef<HTMLDivElement>(null);
 
     const handleAnimationEnd = React.useCallback(() => {
         setIsAnimateEnd(true);
         setTimeout(() => {
-            onClose();
+            onClose && onClose();
             setIsAnimateEnd(false);
         }, 200);
     }, [onClose]);
@@ -46,17 +47,21 @@ function Modal({ isOpen, onClose, style, children }: Props) {
             className={cx(styles.Modal, {
                 [styles.Modal___fadeIn]: isOpen,
                 [styles.Modal___fadeOut]: isAnimateEnd,
+                [styles.Modal___left]: direction === 'left',
+                [styles.Modal___right]: direction === 'right',
             })}
         >
             <div ref={ref} className={styles.Modal__content} style={style}>
-                <button
-                    type="button"
-                    onClick={handleAnimationEnd}
-                    className={styles.Modal__close}
-                    aria-label="close modal"
-                >
-                    <IoClose size={32} />
-                </button>
+                {onClose && (
+                    <button
+                        type="button"
+                        onClick={handleAnimationEnd}
+                        className={styles.Modal__close}
+                        aria-label="close modal"
+                    >
+                        <IoClose size={32} />
+                    </button>
+                )}
                 {children}
             </div>
         </div>
