@@ -12,6 +12,7 @@ const meta = {
     },
     args: {
         direction: 'center',
+        showCloseButton: false,
     },
 } satisfies Meta<typeof Modal>;
 
@@ -64,6 +65,7 @@ export const LeftModal: Story = {
             height: '100dvh',
         },
         children: <div>123</div>,
+        onClose: fn(),
     },
 };
 
@@ -76,6 +78,7 @@ export const RightModal: Story = {
             height: '100dvh',
         },
         children: <div>123</div>,
+        onClose: fn(),
     },
 };
 

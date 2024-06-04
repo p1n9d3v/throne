@@ -5,12 +5,20 @@ import cx from 'classnames';
 
 interface Props extends React.PropsWithChildren {
     isOpen: boolean;
-    onClose?: () => void;
+    onClose: () => void;
     style?: React.CSSProperties;
+    showCloseButton?: boolean;
     direction: 'left' | 'right' | 'center';
 }
 
-function Modal({ isOpen, direction, onClose, style, children }: Props) {
+function Modal({
+    isOpen,
+    direction,
+    showCloseButton = false,
+    onClose,
+    style,
+    children,
+}: Props) {
     const [isAnimateEnd, setIsAnimateEnd] = React.useState(false);
     const ref = React.useRef<HTMLDivElement>(null);
 
@@ -52,7 +60,7 @@ function Modal({ isOpen, direction, onClose, style, children }: Props) {
             })}
         >
             <div ref={ref} className={styles.Modal__content} style={style}>
-                {onClose && (
+                {showCloseButton && (
                     <button
                         type="button"
                         onClick={handleAnimationEnd}
