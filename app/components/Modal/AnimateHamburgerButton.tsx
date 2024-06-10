@@ -4,12 +4,13 @@ import cx from 'classnames';
 import useModal from '@/hooks/useModal';
 
 function AnimateHamburgerButton() {
-    const { isOpen, openModal, closeModal } = useModal();
+    const { isOpen, view, openModal, closeModal } = useModal();
 
     const handleClick = () => {
         isOpen ? closeModal() : openModal('sidebar', 'left');
     };
 
+    console.log('view', view);
     return (
         <button
             type="button"
@@ -20,7 +21,8 @@ function AnimateHamburgerButton() {
         >
             <div
                 className={cx(styles.AnimateHamburgerButton__hambug, {
-                    [styles.AnimateHamburgerButton__hambug___active]: isOpen,
+                    [styles.AnimateHamburgerButton__hambug___active]:
+                        isOpen && view?.type.name === 'Sidebar',
                 })}
             ></div>
         </button>
