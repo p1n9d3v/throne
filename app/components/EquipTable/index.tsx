@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from '../ui/Table';
 import { OnChangeFn, PaginationState } from '@tanstack/react-table';
+import Image from 'next/image';
 
 interface Props {
     data: any;
@@ -40,6 +41,7 @@ function EquipTable({
                 return (
                     <div
                         style={{
+                            position: 'relative',
                             width: '100%',
                             aspectRatio: '1/1',
                             display: 'flex',
@@ -48,13 +50,7 @@ function EquipTable({
                             background: `radial-gradient(circle,var(${qualityColor[quality]}) 0,#000 110%)`,
                         }}
                     >
-                        <img
-                            src={props.getValue()}
-                            alt="image"
-                            style={{
-                                width: '90%',
-                            }}
-                        />
+                        <Image src={props.getValue()} alt="image" fill />
                     </div>
                 );
             },
