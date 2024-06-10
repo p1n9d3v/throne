@@ -42,6 +42,8 @@ next-env.d.ts
 
 # firebase 
 database*
-firestore*
+*.log
+*.rules
 storage*
 firebase-debug.log
+firebase-export*
