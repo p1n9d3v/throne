@@ -15,6 +15,7 @@ import {
     HiOutlineChevronLeft,
     HiOutlineChevronRight,
 } from 'react-icons/hi';
+import { RingLoader } from 'react-spinners';
 
 interface Props<T> {
     columns: Column[];
@@ -23,6 +24,7 @@ interface Props<T> {
     pagination?: PaginationState;
     onChangePage?: OnChangeFn<PaginationState>;
     rowCount?: number;
+    isLoading?: boolean;
 }
 
 function Table<T>({
@@ -32,6 +34,7 @@ function Table<T>({
     pagination,
     rowCount,
     onChangePage,
+    isLoading,
 }: Props<T>) {
     const data = React.useMemo(() => defaultData, [defaultData]);
     const columnHelper = createColumnHelper<T>();
@@ -63,6 +66,7 @@ function Table<T>({
         },
     });
 
+    React.useEffect(() => {}, [isLoading]);
     return (
         <div>
             <div className={styles.Table}>
@@ -95,6 +99,29 @@ function Table<T>({
                             </tr>
                         ))}
                     </thead>
+
+                    {isLoading && (
+                        <tbody>
+                            <tr>
+                                <td colSpan={5}>
+                                    <div
+                                        style={{
+                                            height: '50rem',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                        }}
+                                    >
+                                        <RingLoader
+                                            color="#9751b6"
+                                            size={100}
+                                        />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    )}
+
                     <tbody className={styles.Table__body}>
                         {table.getRowModel().rows.map((row) => (
                             <tr key={row.id}>

@@ -10,7 +10,6 @@ function AnimateHamburgerButton() {
         isOpen ? closeModal() : openModal('sidebar', 'left');
     };
 
-    console.log('view', view);
     return (
         <button
             type="button"

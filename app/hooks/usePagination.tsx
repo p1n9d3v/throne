@@ -13,6 +13,7 @@ function usePagination({ paths, orderByField, orderType }: Props): {
     data: any;
     pagination: PaginationState;
     onChangePage: (pageState: Updater<PaginationState>) => void;
+    isLoading: boolean;
 } {
     const [lastVisible, setLastVisible] = React.useState<any>(undefined);
     const [firstVisible, setFirstVisible] = React.useState<any>(undefined);
@@ -28,8 +29,8 @@ function usePagination({ paths, orderByField, orderType }: Props): {
         pageSize: 5,
     });
 
-    const { data } = useQuery({
-        queryKey: ['weapons', pagination],
+    const { data, isLoading } = useQuery({
+        queryKey: [...paths, pagination],
         queryFn: async () => {
             const resp = await queryPagination({
                 type,
@@ -63,6 +64,7 @@ function usePagination({ paths, orderByField, orderType }: Props): {
         pagination,
         onChangePage,
         data: data ?? [],
+        isLoading,
     };
 }
 

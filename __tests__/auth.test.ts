@@ -14,15 +14,7 @@ describe('Auth', () => {
     let firebaseTestEnv: RulesTestEnvironment | null;
     beforeAll(async () => {
         firebaseTestEnv = await initializeTestEnvironment({
-            projectId: 'test-demo',
-            firestore: {
-                host: 'localhost',
-                port: 8080,
-            },
-            storage: {
-                host: 'localhost',
-                port: 9199,
-            },
+            projectId: 'demo-auth',
         });
     });
 

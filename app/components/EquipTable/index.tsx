@@ -7,6 +7,7 @@ interface Props {
     pagination?: PaginationState;
     onChangePage?: OnChangeFn<PaginationState>;
     rowCount?: number;
+    isLoading?: boolean;
 }
 
 const qualityColor: { [key: string]: string } = {
@@ -15,7 +16,13 @@ const qualityColor: { [key: string]: string } = {
     희귀: '--blue-500',
 };
 
-function EquipTable({ data, pagination, onChangePage, rowCount }: Props) {
+function EquipTable({
+    data,
+    pagination,
+    onChangePage,
+    rowCount,
+    isLoading,
+}: Props) {
     const columns: Column[] = [
         {
             key: 'quality',
@@ -78,6 +85,7 @@ function EquipTable({ data, pagination, onChangePage, rowCount }: Props) {
             pagination={pagination}
             rowCount={rowCount}
             onChangePage={onChangePage}
+            isLoading={isLoading}
         />
     );
 }

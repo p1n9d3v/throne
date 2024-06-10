@@ -4,7 +4,7 @@ import EquipTable from '@/components/EquipTable';
 import usePagination from '@/hooks/usePagination';
 
 export default function Home() {
-    const { data, pagination, onChangePage } = usePagination({
+    const { data, pagination, onChangePage, isLoading } = usePagination({
         paths: ['weapons'],
         orderByField: 'damage.max',
         orderType: 'desc',
@@ -29,6 +29,7 @@ export default function Home() {
                     rowCount={data.totalCount}
                     pagination={pagination}
                     onChangePage={onChangePage}
+                    isLoading={isLoading}
                 />
             </div>
         </div>
