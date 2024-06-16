@@ -37,6 +37,10 @@
     --background-color: #130c29;
 
     --horizontal-padding: 2.4rem;
+
+    --hero2-color: var(--purple-700);
+    --hero-color: var(--purple-600);
+    --rare-color: var(--blue-500);
 }
 
 html {

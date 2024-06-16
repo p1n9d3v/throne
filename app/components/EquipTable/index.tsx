@@ -13,9 +13,9 @@ interface Props {
 }
 
 const qualityColor: { [key: string]: string } = {
-    '영웅 2단': '--purple-700',
-    영웅: '--purple-500',
-    희귀: '--blue-500',
+    '영웅 2단': 'var(--hero2-color)',
+    영웅: '(--hero-color)',
+    희귀: '(--rare-color)',
 };
 
 function EquipTable({
