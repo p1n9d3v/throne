@@ -1,0 +1,9 @@
+.Weapon {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.Weapon__title {
+    font-size: 2.4rem;
+    text-align: center;
+}

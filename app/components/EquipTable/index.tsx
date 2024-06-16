@@ -1,6 +1,7 @@
 import React from 'react';
 import Table from '../ui/Table';
-import { OnChangeFn, PaginationState } from '@tanstack/react-table';
+import { useRouter } from 'next/router';
+import { OnChangeFn, PaginationState, Row } from '@tanstack/react-table';
 import Image from 'next/image';
 
 interface Props {
@@ -24,6 +25,7 @@ function EquipTable({
     rowCount,
     isLoading,
 }: Props) {
+    const router = useRouter();
     const columns: Column[] = [
         {
             key: 'quality',
@@ -74,6 +76,10 @@ function EquipTable({
         },
     ];
 
+    const rowClick = (row: Row<any>) => {
+        router.push(`/equipments/weapons/${row.original.id}`);
+    };
+
     return (
         <Table
             columns={columns}
@@ -82,6 +88,7 @@ function EquipTable({
             rowCount={rowCount}
             onChangePage={onChangePage}
             isLoading={isLoading}
+            rowClick={rowClick}
         />
     );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import {
     OnChangeFn,
     PaginationState,
+    Row,
     createColumnHelper,
     flexRender,
     getCoreRowModel,
@@ -25,6 +26,7 @@ interface Props<T> {
     onChangePage?: OnChangeFn<PaginationState>;
     rowCount?: number;
     isLoading?: boolean;
+    rowClick?: (row: Row<any>) => void;
 }
 
 function Table<T>({
@@ -34,6 +36,7 @@ function Table<T>({
     pagination,
     rowCount,
     onChangePage,
+    rowClick,
     isLoading,
 }: Props<T>) {
     const data = React.useMemo(() => defaultData, [defaultData]);
@@ -124,7 +127,12 @@ function Table<T>({
 
                     <tbody className={styles.Table__body}>
                         {table.getRowModel().rows.map((row) => (
-                            <tr key={row.id}>
+                            <tr
+                                key={row.id}
+                                onClick={
+                                    rowClick ? () => rowClick(row) : undefined
+                                }
+                            >
                                 {row.getVisibleCells().map((cell) => (
                                     <td
                                         key={cell.id}
